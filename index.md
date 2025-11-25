@@ -37,9 +37,9 @@ Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr di
 - **Either**, MFA für federated und non-federated User aktivieren
 
 
-<img src="{{ site.baseurl }}/screenshots/MFA1:2.png" alt="MFA" width="950">
+<img src="{{ site.baseurl }}/screenshots/MFA1:2.png" alt="MFA" width="1200">
 
-<img src="{{ site.baseurl }}/screenshots/MFA2:2.png" alt="MFA" width="950">
+<img src="{{ site.baseurl }}/screenshots/MFA2:2.png" alt="MFA" width="1200">
 
 
 
@@ -61,6 +61,6 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 2. Klicken Sie in der Seitenleiste auf ``Account Settings``
 
 
-<img src="{{ site.baseurl }}/screenshots/Settings1-2.png" alt="AccSettings" width="950">
+<img src="{{ site.baseurl }}/screenshots/Settins1-2.png" alt="AccSettings" width="1200">
 
-<img src="{{ site.baseurl }}/screenshots/Settings2-2.png" alt="AccSettings" width="950">
+<img src="{{ site.baseurl }}/screenshots/Settings2-2.png" alt="AccSettings" width="1200">
