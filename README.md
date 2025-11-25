@@ -1,6 +1,6 @@
 ---
+layout: page
 title: "IBM Cloud – Administration Basics 1"
-layout: default
 ---
 
 
