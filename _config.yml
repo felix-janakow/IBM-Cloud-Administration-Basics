@@ -1,4 +1,5 @@
 theme: minima
+show_title: false
 title: IBM Cloud Basics
 description: Dieser Workshop beinhält die Konzepte Identity and Access Management (IAM) / Zugriffsberechtigungen (Cloud Owner vs. Admin, feingranulares Rollenkonzep), Staging / Isolation von Projekten & Ressourcen (Ressourcengruppen, Enterprise Account Konzept), Usage (Wer hat welchen Service gebucht, wird er noch genutzt), Notification (professioneller Betrieb) & Ticketing ,Observability (Logging, Monitoring, Auditing)
 email: felix.janakow@ibm.com
