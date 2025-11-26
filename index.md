@@ -452,7 +452,7 @@ Hier wird der Zugriff auf Basis von **Identitäten und Kontext** gesteuert. Es g
 ---
 &nbsp;
 
-## 4.1 Navigieren im Katalog 
+## **4.1 Navigieren im Katalog** 
 
 Der Katalog ist der zentrale Marktplatz und Einstiegspunkt für alle Dienste und Softwarelösungen in der IBM Cloud. Er dient dazu, Ressourcen zu entdecken, auszuwählen und bereitzustellen (Provisioning).
 
@@ -484,7 +484,7 @@ Um zum Katalog zu gelangen, gehen Sie wie folgt vor:
 &nbsp;
 
 
-## 4.2 Provisionieren von Ressourcen aus dem Katalog
+## **4.2 Provisionieren von Ressourcen aus dem Katalog**
 
 Sobald Sie den gewünschten Service im Katalog gefunden haben, führen Sie die folgenden Schritte zur Bereitstellung aus:
 
@@ -506,7 +506,7 @@ Sobald Sie den gewünschten Service im Katalog gefunden haben, führen Sie die f
 
 &nbsp;
 
-## 4.3 Managen / löschen von Ressourcen
+## **4.3 Managen / löschen von Ressourcen**
 
 
 Um einen Überblick über provisionierte Ressourcen/Services zu erhalten, navigieren Sie wie folgt:
