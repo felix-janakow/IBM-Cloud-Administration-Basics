@@ -274,7 +274,7 @@ Befolgen Sie dazu folgende Schritte:
 
 &nbsp;
 
-## 3.5 Konzept: Platform Access vs. Service Access
+## **3.5 Konzept: Platform Access vs. Service Access**
 
 Ein häufiges Missverständnis in IAM ist der Unterschied zwischen der Verwaltung der Ressource selbst und der Nutzung der darin enthaltenen Daten. IBM Cloud trennt diese Berechtigungen strikt.
 
@@ -316,16 +316,49 @@ Der Service Access bezieht sich auf Aktionen, die innerhalb des Services stattfi
 
 &nbsp;
 
-<img src="{{ site.baseurl }}/screenshots/platform:service.png" alt="platfromservice" width="1500">
+<img src="{{ site.baseurl }}/screenshots/platform:service.png" alt="platform/service" width="1500">
 
 &nbsp;
 
-<img src="{{ site.baseurl }}/screenshots/platform/service_excalidraw.png" alt="platfromservice" width="1500">
+<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw.png" alt="platform/service" width="1500">
 
 &nbsp;
 
+## **3.6 Custom Roles erstellen**
+
+Wenn die Standardrollen (wie Viewer, Editor, Admin) zu ungenau sind oder zu viele Rechte gewähren, kommen Custom Roles zum Einsatz. Sie ermöglichen eine maßgeschneiderte Zugriffssteuerung nach dem Least-Privilege-Prinzip (Nutzer erhalten nur die minimal nötigen Rechte).
+
+**Wie es funktioniert:** 
+
+Anstatt ein fertiges Rollen-Paket zu übernehmen, wählen Sie aus einer Liste spezifische Service-Aktionen aus und bündeln diese zu einer neuen Rolle.
+
+**Beispiel:** 
+
+Sie möchten, dass ein Operator virtuelle Server neu starten und stoppen darf, aber er soll keine Berechtigung haben, Server zu löschen oder neue zu erstellen.
+
+**Standardrolle Editor:** Wäre zu mächtig (darf auch löschen).
+
+**Custom Role:** Sie erstellen eine Rolle namens "VM-Operator" und fügen nur die Aktionen instance.start und instance.stop hinzu.
 
 
+**Um eine benutzerdefinierte Rolle (Custom Role) zu erstellen, navigieren Sie wie folgt:**
 
+1. Gehen Sie in der oberen Leiste auf ``Manage``
 
+2. Wählen Sie den Eintrag ``Access (IAM)``
 
+3. Klicken Sie in der linken Seitenleiste auf ``Roles``
+
+4. Starten Sie den Prozess mit einem Klick auf ``Create +``
+
+Im anschließenden Menü definieren Sie die Eigenschaften der Rolle. Vergeben Sie zunächst einen aussagekräftigen Namen und eine Beschreibung. Wählen Sie danach den Ziel-Service aus und fügen Sie die gewünschten Berechtigungen (Actions) granular hinzu. Sobald Sie alle Aktionen ausgewählt haben, bestätigen Sie die Erstellung abschließend über den Button Create.
+
+&nbsp;
+
+<img src="{{ site.baseurl }}/screenshots/custom_roles_1.png" alt="platform/service" width="1500">
+
+<img src="{{ site.baseurl }}/screenshots/custom_roles_2.png" alt="platform/service" width="1500">
+
+&nbsp;
+
+## **Context based restrictions (CBR)**
