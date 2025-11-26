@@ -314,9 +314,16 @@ Der Service Access bezieht sich auf Aktionen, die innerhalb des Services stattfi
 
 - **Aber:** Er kann die COS-Instanz selbst nicht löschen oder andere Benutzer dazu einladen
 
+&nbsp;
+
 <img src="{{ site.baseurl }}/screenshots/platform:service.png" alt="platfromservice" width="1500">
 
 &nbsp;
+
+<img src="{{ site.baseurl }}/screenshots/platform/service_excalidraw.png" alt="platfromservice" width="1500">
+
+&nbsp;
+
 
 
 
