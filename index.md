@@ -151,7 +151,7 @@ In der linken Seitenleiste finden Sie anschließend eine Übersicht aller verfü
 
 &nbsp;
 
-## **3.2 User einladen / Account Owner ausfinding machen** 
+## **3.2 User einladen** 
 
 Um neuen Mitarbeitern oder Usern Zugriff auf Ihr IBM Cloud Konto zu gewähren, müssen diese explizit eingeladen werden.
 
@@ -165,13 +165,21 @@ Befolgen Sie dazu folgende Schritte:
 
 4. Wählen Sie den Punkt ``Users`` aus
 
-***Tipp: Sie können den Account Owner in diesem Schritt ausfindig machen, indem Sie in der Liste nach dem User mit dem Tag Owner suchen***
-
 5. Klicken Sie nun auf den blauen Button ``Invite users +``
 
 6. Wählen Sie zwischen ``Access groups`` und ``Access policy``
 
----
+8. Wählen Sie Ihre ``Access groups`` oder ``Access policys`` aus
+
+9. Klicken Sie zuletzt auf ``Invite`` um die User einzuladen
+
+&nbsp;
+
+<img src="{{ site.baseurl }}/screenshots/invite_useres1.png" alt="user_invite1" width="1500">
+
+<img src="{{ site.baseurl }}/screenshots/invite_users2.png" alt="user_invite2" width="1500">
+
+&nbsp;
 
 **Access Groups (Zugriffsgruppen):**
 
@@ -190,19 +198,6 @@ Der Rolle (z. B. Viewer oder Administrator).
 In der Praxis erstellen Sie eine Access Policy und weisen diese einer Access Group zu, die Sie dann User zuweisen. 
 
 Individuelle Policies sind schwer wartbar (nicht skalierbar). Wenn Sie Berechtigungen direkt einzelnen Benutzern zuweisen, müssen Sie bei Änderungen (z. B. Teamwechsel oder Mitarbeiter-Austritt) jeden Benutzer manuell bearbeiten und jede Richtlinie einzeln entfernen. Dies ist extrem zeitaufwendig und fehleranfällig (Sicherheitsrisiko durch vergessene Rechte).
-
----
-
-8. Wählen Sie Ihre ``Access groups`` oder ``Access policys`` aus
-9. Klicken Sie zuletzt auf ``Invite`` um die User einzuladen
-
-&nbsp;
-
-<img src="{{ site.baseurl }}/screenshots/inite_useres1" alt="user_invite1" width="1500">
-
-<img src="{{ site.baseurl }}/screenshots/invite_users2" alt="user_invite2" width="1500">
-
-&nbsp;
 
 
 
