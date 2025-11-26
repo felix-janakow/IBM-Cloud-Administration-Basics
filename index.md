@@ -11,7 +11,9 @@ layout: default
 Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Portal
 
 **1.** Öffnen Sie die Login-Seite: [IBM Cloud Login](cloud.ibm.com/login)
+
 **2.** Geben Sie ihre Zugangsdaten (Benutzername und Passwort) ein
+
 **3.** Bestätigen Sie die Anmeldung, um Zugriff auf das IBM Cloud Dashboard zu erhalten
 
 <img src="{{ site.baseurl }}/screenshots/IBMCloud_Login.png" alt="IBM Cloud Login" width="550">
@@ -28,7 +30,9 @@ Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr di
 **Um MFA zu aktivieren befolgen Sie folgende Schritte:**
 
 **1.** Navigieren Sie in der oberen Leiste zu ``Manage`` und wählen Sie den Unterpunkt ``Access (IAM)``
+
 **2.** In der linken Seitenleiste klicken Sie auf ``Settings``
+
 **3.** Unter ``Settings`` wechseln Sie zu ``Authentication``
 
 **Hier können Sie nun auswählen, wie die MFA eingerichtet werden soll. Die empfohlene Einstellung ist:**
@@ -58,7 +62,9 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 **zu verwalten, gehen Sie wie folgt vor:**
 
 **1.** Navigieren Sie in der oberen Leiste zu ``Manage`` und 
+
 **2.** Wählen Sie den Unterpunkt ``Account``
+
 **3.** Klicken Sie in der Seitenleiste auf ``Account Settings``
 
 &nbsp;
@@ -97,10 +103,14 @@ Planen Sie Ihre Hierarchie, bevor Sie die erste Ressourcengruppe anlegen. Überl
 
 Eine Ressourcengruppe wird wie folgt angelegt: 
 
-**1.** Navigieren Sie in der oberen Leiste zu ``Manage`` und 
+**1.** Navigieren Sie in der oberen Leiste zu ``Manage``
+
 **2.** Wählen Sie den Unterpunkt ``Account``
+
 **3.** Klicken Sie auf der linken Leiste auf ``Account resources``
+
 **4.** Navigieren Sie in den Unterpunkt ``Resource groups``
+
 **5.** Auf der rechten Seite können Sie nun auf ``Create +`` klicken
 
 &nbsp;
@@ -369,7 +379,7 @@ Während IAM ausschließlich regelt, **wer (Identität)** auf eine Ressource zug
 
 **Das Konzept basiert auf zwei Hauptkomponenten:**
 
-**1.** Rules (Regeln)
+**1. Rules (Regeln)**
 
 Hier verknüpfen Sie eine Zone mit einem Cloud Service. Eine Regel besagt beispielsweise: "Der Zugriff auf den Cloud Object Storage Bucket X ist nur erlaubt, wenn die Anfrage aus der Zone 'Firmen-VPN' kommt."
 
@@ -378,7 +388,8 @@ Hier verknüpfen Sie eine Zone mit einem Cloud Service. Eine Regel besagt beispi
 Durch diese zusätzliche Dimension schützt CBR effektiv vor Credential Theft. Selbst wenn ein Angreifer einen gültigen API-Key stiehlt (das "Wer" ist korrekt), wird der Zugriff verweigert, da er nicht aus dem sicheren Firmennetzwerk kommt (das "Wo" ist falsch).
 
 
-**2.** Network Zones (Netzwerkzonen)
+**2. 
+Network Zones (Netzwerkzonen)**
 
 Hier definieren Sie vertrauenswürdige Ursprungsorte. Eine Zone ist eine "Allowlist" und kann beinhalten:
 
@@ -437,7 +448,7 @@ Hier wird der Zugriff auf Basis von **Identitäten und Kontext** gesteuert. Es g
 &nbsp;
 
 
-# 4. Katalog Basics
+# 4. Umgang mit Ressourcen
 ---
 &nbsp;
 
@@ -460,5 +471,56 @@ Der Katalog ist der zentrale Marktplatz und Einstiegspunkt für alle Dienste und
 
 **Private Catalog:** Unternehmen können private Kataloge erstellen. Diese dienen dazu, eigene Softwarelösungen oder genehmigte Versionen von Public-Services intern für Teams bereitzustellen und deren Zugriff zentral zu steuern
 
+&nbsp;
+
+Um zum Katalog zu gelangen, gehen Sie wie folgt vor:
+
+**1.** Klicken Sie in der oberen Leiste auf Catalog
+
+**2.** Durchsuchen Sie das Angebot von über 250 Produkten über die Suchleiste oder nutzen Sie die verschiedenen Filtermöglichkeiten
+
+ <img src="{{ site.baseurl }}/screenshots/catalog1.png" alt="catalog1" width="1500">
+
+&nbsp;
 
 
+ ## 4.2 Provisionieren von Ressourcen aus dem Katalog
+
+Sobald Sie den gewünschten Service im Katalog gefunden haben, führen Sie die folgenden Schritte zur Bereitstellung aus:
+
+**Service auswählen:** Suchen Sie nach dem Namen der Ressource und klicken Sie auf die entsprechende Kachel. Sie gelangen nun auf die Konfigurationsseite des Services.
+
+**Informationen einholen:** Bevor Sie die Ressource erstellen, können Sie sich über die Tabs im oberen Bereich informieren:
+
+**About:** Hier finden Sie eine Übersicht der Funktionen, verfügbare Pläne und Preismodelle.
+
+**Docs:** Dieser Link führt Sie direkt zur offiziellen technischen Dokumentation, um Details zur Einrichtung und Nutzung zu erfahren.
+
+**Konfiguration & Preis prüfen:** Wählen Sie Ihre gewünschte Region und den Preisplan aus. Achten Sie dabei auf die rechte Seitenleiste. Dort wird Ihnen dynamisch eine Kostenschätzung (Cost Summary) angezeigt. Je nach Service und Plan kann der Preis in verschiedenen Intervallen ausgewiesen sein (z. B. Hourly für kurzfristige Nutzung oder Monthly für langfristige Kalkulationen).
+
+**Erstellen:** Sobald Sie alle Einstellungen vorgenommen haben und mit dem angezeigten Preis einverstanden sind, schließen Sie den Vorgang mit einem Klick auf den Button ``Create`` ab. Die Ressource wird nun provisioniert.
+
+&nbsp;
+
+<img src="{{ site.baseurl }}/screenshots/catalog2.png" alt="catalog2" width="1500">
+
+&nbsp;
+
+## 4.3 Managen / löschen von Ressourcen
+
+
+Um einen Überblick über provisionierte Ressourcen/Services zu erhalten, navigieren Sie wie folgt:
+
+**1.** Klicken Sie oben links auf das ``Hamburger-Menü (Navigationsmenü)``
+
+**2.** Wählen Sie den Punkt ``Resource list`` aus
+
+In der nun angezeigten Übersicht haben Sie diverse Möglichkeiten, Ihre Ressourcen effizient zu organisieren. Sie können die Liste gezielt n**ach Namen oder Ressourcengruppen filtern**, um spezifische Dienste schneller zu finden. Zudem haben Sie die **Möglichkeit, Tags zu bearbeiten oder Ressourcen direkt aus der Liste heraus zu löschen**. Ein Klick auf den Namen einer Ressource öffnet deren individuelles Dashboard. Dort gelangen Sie in das detaillierte Menü, um die Instanz weiter zu **konfigurieren, zu bearbeiten oder sie endgültig zu entfernen**.
+
+&nbsp;
+
+<img src="{{ site.baseurl }}/screenshots/catalog4.png" alt="catalog2" width="1500">
+
+<img src="{{ site.baseurl }}/screenshots/catalog3.png" alt="catalog2" width="1500">
+
+&nbsp;
