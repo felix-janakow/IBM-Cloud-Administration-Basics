@@ -662,7 +662,9 @@ Im Bereich Usage bewegen Sie sich vom "Großen ins Kleine": Von der Ressourcengr
 
 **Tipp:** Sie können sich die Ausgaben aller Ebenen als CSV ausgeben lassen indem Sie auf ``Export CSV`` im rechten oberen Feld klicken.
 
-## 5.3 Cost Analysis 
+&nbsp;
+
+## **5.3 Cost Analysis **
 
 Die Cost Analysis dient dazu, Ihre Ausgaben strategisch zu untersuchen. Sie bietet Ihnen leistungsstarke Werkzeuge, um nicht nur Gesamtsummen zu sehen, sondern die Kostentreiber durch präzise Filterung zu isolieren und visuell aufzubereiten.
 
@@ -708,3 +710,46 @@ Der entscheidende Unterschied liegt im Zeitbezug und der Visualisierung.
 
 Während der Bereich Usage Ihnen eine statische, tabellarische Abrechnung für einen einzelnen Monat liefert (Fokus: Rechnungsprüfung), visualisiert die Cost Analysis die Entwicklung über mehrere Monate hinweg (Fokus: Trenderkennung). Sie nutzen **Usage**, um exakt zu sehen, **"was" berechnet wurde**, und **Cost Analysis**, um zu verstehen, **"wie" sich die Kosten entwickeln**.
 
+
+&nbsp;
+
+## **5.4 Spending Notifications**
+
+Damit Sie nicht täglich aktiv das Dashboard überprüfen müssen, bietet IBM Cloud Spending Notifications. Dies sind automatische Warnmeldungen, die Sie per E-Mail informieren, sobald Ihre Ausgaben einen definierten Schwellenwert erreichen.
+
+**So erstellen Sie eine Benachrichtigung:**
+
+**1.** Navigieren Sie zu ``Manage ``> ``Billing and usage`` 
+
+**2.** Wählen Sie im linken Menü den Punkt ``Spending notifications``
+
+**3.** Klicken Sie auf den Button ``Create``
+
+<img src="{{ site.baseurl }}/screenshots/spending_notifications1.png" alt="spending_notifications1" width="1500">
+
+&nbsp;
+
+
+**Konfiguration der Warnung:**
+
+**Service:** 
+
+Entscheiden Sie, für welchen Service die Benarichtigung gelten soll
+
+
+**Recipients**: Geben Sie die E-Mail-Adressen der Personen an, die benachrichtigt werden sollen (z. B. der Account Owner oder der Projektleiter).
+
+
+**Threshold:**
+
+Legen Sie einen Geldbetrag fest (z. B. 500 USD). Sie können dann einstellen, bei wie viel Prozent dieses Betrags gewarnt werden soll (z. B. Benachrichtigung bei 80%, 90% und 100% des Budgets).
+
+
+Bestätigen Sie die Einrichtung abschließend mit einem Klick auf ``Create``
+
+
+<img src="{{ site.baseurl }}/screenshots/spending_notifications1.png" alt="spending_notifications1" width="1500">
+
+&nbsp;
+
+# 6. Enterprise Basics 
