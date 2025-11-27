@@ -27,7 +27,7 @@ Nach der Anmeldung im IBM Cloud Account sollte der nächste Schritt die Aktivier
 
 **Warum MFA?** 
 
-Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr die gängigen Sicherheitsanforderungen. MFA ist in vielen Bereichen wie Banking oder sozialen Netzwerken bereits Standard und wird auch in der IBM Cloud **als Best Practice empfohlen**.
+Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr die gängigen Sicherheitsanforderungen. MFA ist in vielen Bereichen wie Banking oder sozialen Netzwerken bereits Standard und wird auch in der IBM Cloud **als Best Practice empfohlen** [^1].
 
 **Um MFA zu aktivieren befolgen Sie folgende Schritte:**
 
@@ -46,6 +46,8 @@ Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr di
 <img src="{{ site.baseurl }}/screenshots/MFA1:2.png" alt="MFA" width="1500">
 
 <img src="{{ site.baseurl }}/screenshots/MFA2:2.png" alt="MFA" width="1500">
+
+[^1]: Hier steht die Erklärung dazu am Seitenende.
 
 &nbsp;
 
@@ -987,9 +989,14 @@ Bevor Sie ein Support-Ticket eröffnen, finden Sie im Bereich "Troubleshooting" 
 # 8. Best practices
 ---
 
+&nbsp;
+
 | Typ | Beschreibung |
 | :--- | :--- |
-| Cluster-Prod | OpenShift |  
-| Datenbank-V1 | PostgreSQL |  
-| Archiv-Speicher | COS |  
+| Account Owner | Nutzen Sie den Owner-Login nur im Notfall. Erstellen Sie für die tägliche Verwaltung eine Platform Admin Gruppe |  
+| IAM / Zugriff | Vermeiden Sie Einzel-Policies. Nutzen Sie konsequent Access Groups, um Berechtigungen zentral und skalierbar zu steuern |  
+| Ressourcen | Trennen Sie Projekte und Umgebungen (Dev/Test/Prod) strikt durch eigene Ressourcengruppen für sauberes Billing und IA |
+| Kosten| Richten Sie zwingend Spending Notifications ein, um bei Budgetüberschreitung sofort per E-Mail gewarnt zu werden |  
+| Sicherheit | Nutzen Sie Context Based Restrictions (CBR), um den Zugriff nicht nur auf User, sondern auch auf sichere Netzwerke zu beschränken |
+| Betrieb | Abonnieren Sie im Notification Center E-Mail-Warnungen für Incidents und Wartungsarbeiten |  
 
