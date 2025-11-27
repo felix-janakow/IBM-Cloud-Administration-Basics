@@ -997,7 +997,9 @@ Bevor Sie ein Support-Ticket eröffnen, finden Sie im Bereich "Troubleshooting" 
 | Ressourcen | Trennen Sie Projekte und Umgebungen (Dev/Test/Prod) strikt durch eigene Ressourcengruppen für sauberes Billing und IA |
 | Kosten| Richten Sie zwingend Spending Notifications ein, um bei Budgetüberschreitung sofort per E-Mail gewarnt zu werden |  
 | Sicherheit | Nutzen Sie Context Based Restrictions (CBR), um den Zugriff nicht nur auf User, sondern auch auf sichere Netzwerke zu beschränken |
-| Betrieb | Abonnieren Sie im Notification Center E-Mail-Warnungen für Incidents und Wartungsarbeiten |  
+| Betrieb | Abonnieren Sie im Notification Center E-Mail-Warnungen für Incidents und Wartungsarbeiten |
+| Support | Reagieren Sie zeitnah auf Rückfragen. Tickets werden nach 7 Tagen Inaktivität automatisch geschlossen | 
+| Dokumentation | Konsultieren Sie die offiziellen Docs als primäre Quelle für Anleitungen und Troubleshooting, bevor Sie Tickets eröffnen |  
 
 
 
