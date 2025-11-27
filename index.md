@@ -535,7 +535,7 @@ In der nun angezeigten Übersicht haben Sie diverse Möglichkeiten, Ihre Ressour
 ---
 &nbsp;
 
-## 5.1 Billing and Usage Overview
+## **5.1 Billing and Usage Overview**
 
 Der zentrale Einstiegspunkt in das Kostenmanagement ist die Overview-Seite. Sie bietet eine hochgerechnete Zusammenfassung des aktuellen finanziellen Status Ihres Accounts, ohne sofort in komplexe Datentabellen einzutauchen.
 
@@ -561,6 +561,7 @@ Eine Übersicht über vertragliche Mindestabnahmen, Abonnements oder verfügbare
 
 Zeigt den Status Ihrer konfigurierten Warnmeldungen an (z. B. ob Budgetgrenzen fast erreicht sind).
 
+&nbsp;
 
 Navigation zu Billing and Usage:
 
@@ -574,7 +575,7 @@ Navigation zu Billing and Usage:
 
 &nbsp;
 
-## 5.2 Usage 
+## **5.2 Usage** 
 
 Der Bereich Usage ist Ihr primäres Werkzeug, um die monatliche Rechnung zu validieren. Er ermöglicht es Ihnen, Kosten präzise auf Ressourcengruppen herunterzubrechen und bis zur einzelnen technischen Metrik nachzuvollziehen.
 
@@ -604,7 +605,9 @@ Sie sehen sofort, welche Kosten die gewählte Ressourcengruppe in diesem Monat v
 
 **Usage nach Service, Plan und Region prüfen:** 
 
-Klicken Sie auf eine ``View plans``, um die Usage eines Services einzusehen (Sie können auch direkt in der ``Usage`` Startansicht einen Service wählen und auf ``View plans`` gehen)
+Klicken Sie auf ``View plans``, um die Usage eines Services einzusehen 
+
+(Sie können auch direkt in der ``Usage`` Startansicht einen Service wählen und auf ``View plans`` gehen)
 
 **Ergebnis:** 
 
@@ -631,7 +634,7 @@ MILLION_API_CALLS (Wie oft wurde der Service angesprochen?)
 
 IP_HOURS (Kosten für reservierte IPs).
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage6.png" alt="billingandusage6" width="1500">
+<img src="{{ site.baseurl }}/screenshots/billingandusage6_.png" alt="billingandusage6" width="1500">
 
 <img src="{{ site.baseurl }}/screenshots/billingandusage7.png" alt="billingandusage7" width="1500">
 
@@ -657,8 +660,51 @@ Im Bereich Usage bewegen Sie sich vom "Großen ins Kleine": Von der Ressourcengr
 
 &nbsp;
 
+**Tipp:** Sie können sich die Ausgaben aller Ebenen als CSV ausgeben lassen indem Sie auf ``Export CSV`` im rechten oberen Feld klicken.
 
 ## 5.3 Cost Analysis 
 
+Die Cost Analysis dient dazu, Ihre Ausgaben strategisch zu untersuchen. Sie bietet Ihnen leistungsstarke Werkzeuge, um nicht nur Gesamtsummen zu sehen, sondern die Kostentreiber durch präzise Filterung zu isolieren und visuell aufzubereiten.
 
+**Navigation:** 
+
+Wählen Sie im linken Menü unter Billing and usage den Punkt Cost analysis
+
+**Funktionen und Filter:**
+
+Um die Kostenanalyse genau auf Ihre Fragestellung zuzuschneiden, bietet die Seitenleiste eine Vielzahl an Filtern. Sie können die Anzeige unter anderem nach folgenden Kategorien einschränken:
+
+- ``Region``
+
+- ``Service``
+
+- ``Plan``
+
+- ``Instance & Instance ID``
+
+- ``Resource group``
+
+- ``Category``
+
+- ``Tags``
+
+...und weiteren spezifischen Kriterien
+
+**Time frame:**
+
+Über das Dropdown-Menü Time frame bestimmen Sie den Betrachtungszeitraum (z. B. 3 months, 6 months), um Entwicklungen über einen längeren Zeitraum zu vergleichen
+
+**Group by:** 
+
+Ganz oben können Sie über Group by festlegen, wie die Daten im Diagramm zusammengefasst werden sollen (z. B. Kosten gruppiert nach Ressourcengruppe oder Service), um Trends sofort visuell zu erfassen.
+
+<img src="{{ site.baseurl }}/screenshots/costanalysis.png" alt="costanalysis" width="1500">
+
+&nbsp;
+
+**Unterschied zu Usage:** 
+
+Der entscheidende Unterschied liegt im Zeitbezug und der Visualisierung. 
+
+Während der Bereich Usage Ihnen eine statische, tabellarische Abrechnung für einen einzelnen Monat liefert (Fokus: Rechnungsprüfung), visualisiert die Cost Analysis die Entwicklung über mehrere Monate hinweg (Fokus: Trenderkennung). Sie nutzen **Usage**, um exakt zu sehen, **"was" berechnet wurde**, und **Cost Analysis**, um zu verstehen, **"wie" sich die Kosten entwickeln**.
 
