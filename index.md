@@ -530,3 +530,135 @@ In der nun angezeigten Übersicht haben Sie diverse Möglichkeiten, Ihre Ressour
 <img src="{{ site.baseurl }}/screenshots/catalog3.png" alt="catalog2" width="1500">
 
 &nbsp;
+
+# 5. Billing and Usage 
+---
+&nbsp;
+
+## 5.1 Billing and Usage Overview
+
+Der zentrale Einstiegspunkt in das Kostenmanagement ist die Overview-Seite. Sie bietet eine hochgerechnete Zusammenfassung des aktuellen finanziellen Status Ihres Accounts, ohne sofort in komplexe Datentabellen einzutauchen.
+
+**Wichtige Kennzahlen auf einen Blick, hier erhalten Sie sofortige Auskunft über:**
+
+**Usage summary:** 
+
+Zeigt die Kosten der vergangenen Monate, die geschätzten Gesamtkosten für den laufenden Monat bis zum jetzigen Zeitpunkt und eine Kostenvorhersage für den kommenden Monat
+
+**Recent Invoices:** 
+
+Eine Auflistung der Rechnungen der letzten Monate inklusive Betrag und Zahlungsstatus
+
+**Billing Period:** 
+
+Gibt das Start- und Enddatum des aktuellen Abrechnungszyklus an.
+
+**Commitments & Subscriptions:** 
+
+Eine Übersicht über vertragliche Mindestabnahmen, Abonnements oder verfügbares Guthaben
+
+**Spending notifications:** 
+
+Zeigt den Status Ihrer konfigurierten Warnmeldungen an (z. B. ob Budgetgrenzen fast erreicht sind).
+
+
+Navigation zu Billing and Usage:
+
+**1.** Klicken Sie in der oberen Leiste auf ``Manage``
+
+**2.** Wählen Sie ``Billing and usage``
+
+**3.** Sie landen standardmäßig direkt auf dem Reiter ``Overview``
+
+<img src="{{ site.baseurl }}/screenshots/billingandusage1.png" alt="billingandusage1" width="1500">
+
+&nbsp;
+
+## 5.2 Usage 
+
+Der Bereich Usage ist Ihr primäres Werkzeug, um die monatliche Rechnung zu validieren. Er ermöglicht es Ihnen, Kosten präzise auf Ressourcengruppen herunterzubrechen und bis zur einzelnen technischen Metrik nachzuvollziehen.
+
+**Navigation:** Wählen Sie im linken Menü unter ``Billing and usage`` den Punkt ``Usage``
+
+<img src="{{ site.baseurl }}/screenshots/billingandusage2.png" alt="billingandusage2" width="1500">
+
+&nbsp;
+
+
+**Der Analyse-Workflow (Drill-down):**
+
+Gehen Sie wie folgt vor, um die Kostenentstehung im Detail zu prüfen:
+
+**Zeitraum und Gruppierung wählen:** 
+
+Wählen Sie oben rechts den gewünschten Monat. Ändern Sie anschließend die Ansicht bei "Group by" auf die gewünschte Resource Group
+
+**Ergebnis:** 
+
+Sie sehen sofort, welche Kosten die gewählte Ressourcengruppe in diesem Monat verursacht hat
+
+<img src="{{ site.baseurl }}/screenshots/billingandusage3.png" alt="billingandusage3" width="1500">
+
+&nbsp;
+
+
+**Usage nach Service, Plan und Region prüfen:** 
+
+Klicken Sie auf eine ``View plans``, um die Usage eines Services einzusehen (Sie können auch direkt in der ``Usage`` Startansicht einen Service wählen und auf ``View plans`` gehen)
+
+**Ergebnis:** 
+
+Sie sehen auf einen Blick den genutzten Plan (z. B. Standard oder Enterprise) und die Region (z. B. Frankfurt), in der die Kosten angefallen sind. Sie können auch hier den Filter wieder auf einen bestimmten Monat und Resourcengruppe legen
+
+<img src="{{ site.baseurl }}/screenshots/billingandusage4.png" alt="billingandusage4" width="1500">
+
+<img src="{{ site.baseurl }}/screenshots/billingandusage5.png" alt="billingandusage5" width="1500">
+
+&nbsp;
+
+
+**Verbrauchseinheiten analysieren:** 
+
+Klicken Sie bei einem Service auf ``View details``
+
+**Ergebnis:** 
+
+Hier sehen Sie die gesamte Aufschlüsselung der Abrechnungsmetriken für diesen Service. Sie erkennen genau, was berechnet wurde, z. B.:
+
+GIGABYTE_HOURS (Wie viel Speicher wurde wie lange belegt?)
+
+MILLION_API_CALLS (Wie oft wurde der Service angesprochen?)
+
+IP_HOURS (Kosten für reservierte IPs).
+
+<img src="{{ site.baseurl }}/screenshots/billingandusage6.png" alt="billingandusage6" width="1500">
+
+<img src="{{ site.baseurl }}/screenshots/billingandusage7.png" alt="billingandusage7" width="1500">
+
+&nbsp;
+
+
+
+**Tiefenanalyse auf Instanz-Ebene:** 
+
+Um genau zu wissen, welche konkrete Instanz(Resourcengruppe) für welche Kosten verantwortlich ist und wie genau die Kosten aufgeschlüsstelt werden, klicken Sie auf ``View instance details``
+
+**Ergebnis:** 
+
+Sie bohren noch eine Ebene tiefer. Jetzt sehen Sie jede einzelne Instanz(Resourcengruppe) und deren individuellen Beitrag zu den Gesamtkosten.
+
+**Zusammenfassung:**
+
+Im Bereich Usage bewegen Sie sich vom "Großen ins Kleine": Von der Ressourcengruppe über den Service-Plan hin zu den technischen Metriken und schließlich zur einzelnen Instanz.
+
+<img src="{{ site.baseurl }}/screenshots/billingandusage8.png" alt="billingandusage8" width="1500">
+
+<img src="{{ site.baseurl }}/screenshots/billingandusage9.png" alt="billingandusage9" width="1500">
+
+&nbsp;
+
+
+## 5.3 Cost Analysis 
+
+
+
