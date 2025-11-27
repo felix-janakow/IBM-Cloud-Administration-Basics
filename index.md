@@ -27,7 +27,7 @@ Nach der Anmeldung im IBM Cloud Account sollte der nächste Schritt die Aktivier
 
 **Warum MFA?** 
 
-Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr die gängigen Sicherheitsanforderungen. MFA ist in vielen Bereichen wie Banking oder sozialen Netzwerken bereits Standard und wird auch in der IBM Cloud **als Best Practice empfohlen** [^1].
+Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr die gängigen Sicherheitsanforderungen. MFA ist in vielen Bereichen wie Banking oder sozialen Netzwerken bereits Standard und wird auch in der IBM Cloud **als Best Practice empfohlen** [^MFA_Doku].
 
 **Um MFA zu aktivieren befolgen Sie folgende Schritte:**
 
@@ -47,7 +47,6 @@ Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr di
 
 <img src="{{ site.baseurl }}/screenshots/MFA2:2.png" alt="MFA" width="1500">
 
-[^1]: Hier steht die Erklärung dazu am Seitenende.
 
 &nbsp;
 
@@ -999,4 +998,10 @@ Bevor Sie ein Support-Ticket eröffnen, finden Sie im Bereich "Troubleshooting" 
 | Kosten| Richten Sie zwingend Spending Notifications ein, um bei Budgetüberschreitung sofort per E-Mail gewarnt zu werden |  
 | Sicherheit | Nutzen Sie Context Based Restrictions (CBR), um den Zugriff nicht nur auf User, sondern auch auf sichere Netzwerke zu beschränken |
 | Betrieb | Abonnieren Sie im Notification Center E-Mail-Warnungen für Incidents und Wartungsarbeiten |  
+
+
+---
+
+[^MFA_Doku]: Link zur MFA Doku https://cloud.ibm.com/docs/account?topic=account-enablemfa
+
 
