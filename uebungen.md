@@ -1,10 +1,12 @@
 ---
 layout: page
-title: IAM & Security
-permalink: /iam/
+title: IBM Cloud hands-on
+permalink: /uebungen/
 order: 2
 ---
 
 # Übung 1
 
-Hier kannst du deinen Text über Access Groups und Policies schreiben...
+Platzhalter erste Übung 
+
+# Übung 2

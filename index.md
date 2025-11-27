@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Cloud Administration Basics I 
 ---
 
 # 1. Erste Schritte
