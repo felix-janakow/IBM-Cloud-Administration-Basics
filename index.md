@@ -756,7 +756,7 @@ Bestätigen Sie die Einrichtung abschließend mit einem Klick auf ``Create``
 ---
 &nbsp;
 
-## 6.1 Enterprise Account Basics
+## **6.1 Enterprise Account Basics**
 
 Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Organisationen ermöglicht, mehrere IBM Cloud Accounts unter einem zentralen Dach zusammenzufassen. Dies vereinfacht die Verwaltung, Abrechnung und Governance erheblich.
 
@@ -824,19 +824,19 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
     
 &nbsp;
 
+## **6.2 Enterprise Account Beispielarchitekturen**
 
-**Beispielarchitekturen:**
-
+&nbsp;
 - **Automobilhersteller**
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountCarco.png" alt="EnterpriseAccountCarco" width="1200">
+<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountCarco_.png" alt="EnterpriseAccountCarco" width="1200">
 
 
 &nbsp;
 
 - **Business Partner mit Endkunden**
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountBP.png" alt="EnterpriseAccountBP" width="1200">
+<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountBP_.png" alt="EnterpriseAccountBP" width="1000">
 
 &nbsp;
 
@@ -844,7 +844,7 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
 ---
 &nbsp;
 
-## 7.1 Support Center 
+## 7.1 **Support Center** 
 
 
 
