@@ -18,9 +18,9 @@ show_excerpts: false
 # Rheienfolge
 header_pages:
  - index.md
- - uebungen.md
 
 # Dateien von der Verarbeitung ausschließen
 exclude:
   - README.md
   - MINIMA_FEATURES.md
+  - uebungen.md
