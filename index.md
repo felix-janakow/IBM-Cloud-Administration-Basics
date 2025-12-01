@@ -10,7 +10,7 @@ title: Cloud Administration Basics I
 
 ## **1.1 Login im IBM Cloud Portal**
 
-Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Portal
+Der erste Schritt um mit der IBM Cloud zu arbeiten ist die Anmeldung im IBM Cloud Portal
 
 **1.** Öffnen Sie die Login-Seite: [IBM Cloud Login](cloud.ibm.com/login)
 
@@ -23,7 +23,7 @@ Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Po
 
 ## **1.2 Multi-Faktor-Authentisierung (MFA) aktivieren**
 
-Nach der Anmeldung im IBM Cloud Account sollte der nächste Schritt die Aktivierung der Multi-Faktor-Authentifizierung (MFA) sein.
+Nach der Anmeldung im IBM Cloud Account sollte der erste Schritt die Aktivierung der Multi-Faktor-Authentifizierung (MFA) sein.
 
 **Warum MFA?** 
 
@@ -80,7 +80,7 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 
 
 
-# 2. Arbeiten mit Ressorucengruppen
+# 2. Arbeiten mit Ressourcengruppen
 ---
 &nbsp;
 
@@ -104,7 +104,7 @@ Der physische Standort der Ressourcen ist für die Gruppierung dabei irrelevant.
 
 ## **2.2 Ressourcengruppen anlegen** 
 
-Planen Sie Ihre Hierarchie, bevor Sie die erste Ressourcengruppe anlegen. Überlegen Sie, ob eine Gliederung nach Umgebungen (Dev/Test), Projekten oder Teams für Ihren Fall am besten geeignet ist. Berücksichtigen Sie dabei, wie Sie Berechtigungen vererben, Kosten zuordnen und Ressourcen im Team verwalten möchten.
+Planen Sie Ihre Hierarchie, bevor Sie die erste Ressourcengruppe anlegen. Überlegen Sie, ob eine Gliederung nach Umgebungen (Dev/Test), Projekten oder Teams für Ihren Fall am besten geeignet ist. Berücksichtigen Sie dabei, wie Sie Berechtigungen vergeben, Kosten zuordnen und Ressourcen im Team verwalten möchten.
 
 Eine Ressourcengruppe wird wie folgt angelegt: 
 
@@ -143,7 +143,7 @@ Eine Ressourcengruppe wird wie folgt angelegt:
 
 **Zugriffssteuerung (Manage Access)**
 
-- **Access Groups:** Das wichtigste Instrument für effiziente Rechteverwaltung. IAM-Richtlinien werden einmalig der Gruppe zugewiesen; alle Mitglieder (Benutzer, Service-IDs) erben diese Berechtigungen automatisch.
+- **Access Groups:** Das wichtigste Instrument für effiziente Rechteverwaltung. IAM-Richtlinien werden einmalig der Gruppe zugewiesen. Alle Mitglieder (Benutzer, Service-IDs) erben diese Berechtigungen automatisch.
 
 - **Authorizations:** Regeln den direkten Zugriff zwischen IBM Cloud Services (Service-zu-Service), ohne dass eine Benutzeridentität involviert ist (z. B. ein Kubernetes-Cluster darf auf eine Container Registry zugreifen).
 
@@ -211,7 +211,7 @@ Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
 
 - Administrator Rolle auf All Account Management Services (für Billing, Support, User-Management)
 
-- Administrator Rolle auf All Identity and Access enabled services (um anderen Teams Rechte zu geben)
+- Administrator Rolle auf All IAM Account Management services (um anderen Teams Rechte zu geben)
 
 
 **Befolgen Sie diese Schritte, um die Gruppe für Administratoren anzulegen und mit den notwendigen Rechten auszustatten:**
@@ -238,7 +238,7 @@ Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
 
 **11.** Klicken Sie unten auf den Button ``Add``, um diese Regel vorzumerken
 
-**12.** Legen Sie nun direkt die zweite Policy an: Wählen Sie diesmal als Service die Option ``All Identity and Access enabled services aus`` (dies ermöglicht Zugriff auf alle Ressourcen-Instanzen)
+**12.** Legen Sie nun direkt die zweite Policy an: Wählen Sie diesmal als Service die Option ``All IAM Account Management services`` (dies ermöglicht Zugriff auf alle Ressourcen-Instanzen)
 
 **13.** Wählen Sie unter "Roles and actions" auch hier erneut die Rolle ``Administrator`` aus
 
@@ -335,7 +335,7 @@ Der Service Access bezieht sich auf Aktionen, die innerhalb des Services stattfi
 
 &nbsp;
 
-<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw.png" alt="platform/service" width="1100">
+<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw_.png" alt="platform/service" width="1100">
 
 &nbsp;
 
@@ -482,7 +482,7 @@ Um zum Katalog zu gelangen, gehen Sie wie folgt vor:
 
 **1.** Klicken Sie in der oberen Leiste auf Catalog
 
-**2.** Durchsuchen Sie das Angebot von über 250 Produkten über die Suchleiste oder nutzen Sie die verschiedenen Filtermöglichkeiten
+**2.** Durchsuchen Sie das Angebot von über 300 Produkten über die Suchleiste oder nutzen Sie die verschiedenen Filtermöglichkeiten
 
 <img src="{{ site.baseurl }}/screenshots/catalog1.png" alt="catalog1" width="1500">
 
