@@ -99,12 +99,22 @@ p {
 }
 
 /* Center all images */
+.post-content img,
+.lang-en img,
+.lang-de img,
 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  text-align: center !important;
+}
+
+p img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 ul, ol {
@@ -516,7 +526,7 @@ Service Access refers to actions that take place within the service, mostly via 
 
 <img src="{{ site.baseurl }}/screenshots/platform:service.png" alt="Platform vs Service Access" width="850">
 
-<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw_.png" alt="Platform vs Service Access Diagram" width="850">
+<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw_.png" alt="Platform vs Service Access Diagram" width="650">
 
 ---
 
