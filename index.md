@@ -966,18 +966,17 @@ IBM Cloud provides comprehensive documentation for all services and features.
 
 # 8. Best Practices
 
-## General Recommendations
 
-1. **Enable MFA immediately** for all accounts
-2. **Use Access Groups** instead of individual user policies
-3. **Implement Resource Groups** for logical organization
-4. **Set up Spending Notifications** to avoid unexpected costs
-5. **Regularly review IAM policies** and remove unnecessary permissions
-6. **Use Context-Based Restrictions** for sensitive resources
-7. **Monitor Notifications** regularly for important updates
-8. **Document your architecture** and access policies
-9. **Implement the principle of least privilege** for all users
-10. **Regular security audits** of your cloud environment
+| Type | Description |
+| :--- | :--- |
+| Account Owner | Use the Owner login only in emergencies. Create a Platform Admin Group for daily management |
+| IAM / Access | Avoid individual policies. Consistently use Access Groups to manage permissions centrally and scalably |
+| Resources | Strictly separate projects and environments (Dev/Test/Prod) through dedicated Resource Groups for clean billing and IAM |
+| Costs | Mandatory setup of Spending Notifications to receive immediate email alerts when budget thresholds are exceeded |
+| Security | Use Context Based Restrictions (CBR) to limit access not only by user but also to secure networks |
+| Operations | Subscribe to email alerts in the Notification Center for incidents and maintenance work |
+| Support | Respond promptly to inquiries. Tickets are automatically closed after 7 days of inactivity |
+| Documentation | Consult the official Docs as the primary source for guides and troubleshooting before opening tickets |
 
 </div>
 
