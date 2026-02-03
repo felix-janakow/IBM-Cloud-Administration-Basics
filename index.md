@@ -232,107 +232,13 @@ tr:hover {
   }
 }
 
-/* Dark Mode Toggle Button */
-.dark-mode-toggle {
-  position: fixed !important;
-  top: 10px !important;
-  right: 180px !important;
-  z-index: 9999 !important;
-  background: linear-gradient(135deg, #393939 0%, #2d2d2d 100%);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.dark-mode-toggle:hover {
-  background: linear-gradient(135deg, #4a4a4a 0%, #393939 100%);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-  transform: translateY(-2px);
-}
-
-.dark-mode-toggle:active {
-  transform: translateY(0);
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #1a1a1a !important;
-  color: #e0e0e0 !important;
-}
-
-body.dark-mode .wrapper {
-  background-color: #1a1a1a !important;
-}
-
-body.dark-mode h1 {
-  color: #bb86fc !important;
-  border-bottom-color: #bb86fc !important;
-}
-
-body.dark-mode h2 {
-  color: #a370f7 !important;
-  border-left-color: #a370f7 !important;
-}
-
-body.dark-mode h3 {
-  color: #9d6ce8 !important;
-}
-
-body.dark-mode p,
-body.dark-mode li {
-  color: #e0e0e0 !important;
-}
-
-body.dark-mode a {
-  color: #bb86fc !important;
-}
-
-body.dark-mode a:hover {
-  color: #d4b3ff !important;
-}
-
-body.dark-mode code {
-  background-color: #2d2d2d !important;
-  color: #bb86fc !important;
-}
-
-body.dark-mode pre {
-  background-color: #2d2d2d !important;
-  border-color: #3d3d3d !important;
-}
-
-body.dark-mode .site-header {
-  background-color: #2d2d2d !important;
-  border-bottom-color: #3d3d3d !important;
-}
-
-body.dark-mode .site-title,
-body.dark-mode .site-nav .page-link {
-  color: #e0e0e0 !important;
-}
-
 /* Print styles */
 @media print {
-  .language-toggle,
-  .dark-mode-toggle {
+  .language-toggle {
     display: none;
   }
 }
 </style>
-
-<button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
-  <span class="light-mode-icon">🌙 Dark</span>
-  <span class="dark-mode-icon" style="display: none;">☀️ Light</span>
-</button>
 
 <button class="language-toggle" onclick="toggleLanguage()" aria-label="Toggle language">
   <span class="lang-en">🇩🇪 German</span>
@@ -352,41 +258,12 @@ function toggleLanguage() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Dark mode toggle function
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-  const isDark = document.body.classList.contains('dark-mode');
-  localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
-  
-  // Toggle button text
-  const lightIcon = document.querySelector('.light-mode-icon');
-  const darkIcon = document.querySelector('.dark-mode-icon');
-  if (isDark) {
-    lightIcon.style.display = 'none';
-    darkIcon.style.display = 'flex';
-  } else {
-    lightIcon.style.display = 'flex';
-    darkIcon.style.display = 'none';
-  }
-}
-
-// Load saved preferences on page load
+// Load saved preference on page load
 window.addEventListener('DOMContentLoaded', function() {
-  // Load language preference
   const savedLang = localStorage.getItem('preferredLanguage');
   if (savedLang === 'de') {
     document.body.classList.add('show-german');
     document.title = 'Cloud Administration Basics I - Deutsch';
-  }
-  
-  // Load dark mode preference
-  const darkMode = localStorage.getItem('darkMode');
-  if (darkMode === 'enabled') {
-    document.body.classList.add('dark-mode');
-    const lightIcon = document.querySelector('.light-mode-icon');
-    const darkIcon = document.querySelector('.dark-mode-icon');
-    lightIcon.style.display = 'none';
-    darkIcon.style.display = 'flex';
   }
 });
 </script>
