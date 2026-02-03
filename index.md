@@ -222,7 +222,7 @@ tr:hover {
 </style>
 
 <button class="language-toggle" onclick="toggleLanguage()" aria-label="Toggle language">
-  <span class="lang-en">🇩🇪 Deutsch</span>
+  <span class="lang-en">🇩🇪 German</span>
   <span class="lang-de">🇬🇧 English</span>
 </button>
 
