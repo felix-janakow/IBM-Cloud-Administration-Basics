@@ -35,6 +35,13 @@ exclude:
   - .bob/
   - .DS_Store
 
+# Markdown processor configuration
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  parse_block_html: true
+
 # Plugins (optional, for future enhancements)
 plugins:
   - jekyll-seo-tag
