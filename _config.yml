@@ -5,6 +5,10 @@ description: "Praxis-Workshop zu den Grundlagen der IBM Cloud Administration: IA
 email: felix.janakow@ibm.com
 author: Felix Janakow
 
+# Language settings for bilingual site
+lang: en
+languages: ["en", "de"]
+
 # Minima Theme Konfiguration
 minima:
   skin: auto  # Optionen: auto, classic, dark, solarized, solarized-dark
@@ -15,7 +19,7 @@ minima:
 # Weitere Einstellungen
 show_excerpts: false
 
-# Rheienfolge
+# Seitenreihenfolge
 header_pages:
  - index.md
 
@@ -24,3 +28,14 @@ exclude:
   - README.md
   - MINIMA_FEATURES.md
   - uebungen.md
+  - index_german_backup.md
+  - index_backup_original.md
+  - index_bilingual.md
+  - Sprechtext.docx
+  - .bob/
+  - .DS_Store
+
+# Plugins (optional, for future enhancements)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
