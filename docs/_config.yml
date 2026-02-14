@@ -1,6 +1,6 @@
 theme: minima
 title: "IBM Cloud Administration Basics I"
-baseurl: "/IBM-Cloud-Administration-Basics-1"
+baseurl: "/TTA-Advantage"
 description: "Hands-on workshop on IBM Cloud Administration fundamentals: IAM, Resource Isolation, Cost Management, and Best Practices for Monitoring and Operations. | Praxis-Workshop zu den Grundlagen der IBM Cloud Administration: IAM, Ressourcen-Isolation, Kostenmanagement sowie Best Practices für Monitoring und Betrieb."
 email: felix.janakow@ibm.com
 author: Felix Janakow

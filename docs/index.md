@@ -281,7 +281,7 @@ The first step to working with IBM Cloud is logging into the IBM Cloud Portal.
 2. Enter your credentials (username and password)
 3. Confirm the login to gain access to the IBM Cloud Dashboard
 
-<img src="{{ site.baseurl }}/screenshots/IBMCloud_Login.png" alt="IBM Cloud Login" width="450">
+<img src="screenshots/IBMCloud_Login.png" alt="IBM Cloud Login" width="450">
 
 ---
 
@@ -304,9 +304,9 @@ A password-only protected account no longer meets current security requirements.
 - **MFA for a user with an IBMid**
 - **Either**, enable MFA for federated and non-federated users
 
-<img src="{{ site.baseurl }}/screenshots/MFA1:2.png" alt="MFA" width="950">
+<img src="screenshots/MFA1:2.png" alt="MFA" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/MFA2:2.png" alt="MFA" width="950">
+<img src="screenshots/MFA2:2.png" alt="MFA" width="950">
 
 ---
 
@@ -328,9 +328,9 @@ To find important information such as the account name or account ID, as well as
 2. Select the `Account` submenu
 3. Click on `Account Settings` in the sidebar
 
-<img src="{{ site.baseurl }}/screenshots/Settins1-2.png" alt="AccSettings" width="950">
+<img src="screenshots/Settins1-2.png" alt="AccSettings" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/Settings2-2_.png" alt="AccSettings" width="950">
+<img src="screenshots/Settings2-2_.png" alt="AccSettings" width="950">
 
 ---
 
@@ -340,11 +340,11 @@ To find important information such as the account name or account ID, as well as
 
 Resource groups are **logical containers** that organize related cloud resources (VMs, databases, etc.). They serve as central anchor points to **apply IAM access policies to the entire group**, simplifying permission management. They also enable **clear cost tracking (billing)** and **easy, isolated management** of the entire lifecycle of the contained resources.
 
-<img src="{{ site.baseurl }}/screenshots/Ressourcengruppen.png" alt="Resource Groups Explained" width="950">
+<img src="screenshots/Ressourcengruppen.png" alt="Resource Groups Explained" width="950">
 
 The physical location of the resources is irrelevant for grouping. A resource group can contain resources that have been deployed across different geographic zones and regions.
 
-<img src="{{ site.baseurl }}/screenshots/res_grp_zonen.png" alt="Resource Groups Zones" width="750">
+<img src="screenshots/res_grp_zonen.png" alt="Resource Groups Zones" width="750">
 
 ---
 
@@ -360,7 +360,7 @@ Plan your hierarchy before creating the first resource group. Consider whether o
 4. Navigate to the `Resource groups` submenu
 5. On the right side, you can now click on `Create +`
 
-<img src="{{ site.baseurl }}/screenshots/create_rc_grp_.png" alt="Create Resource Group" width="950">
+<img src="screenshots/create_rc_grp_.png" alt="Create Resource Group" width="950">
 
 ---
 
@@ -386,7 +386,7 @@ Plan your hierarchy before creating the first resource group. Consider whether o
 
 - **Roles:** Define the specifically allowed actions. IBM distinguishes between `Platform Roles` (management of COS, e.g., create/delete) and `Service Roles` (usage of COS, e.g., read/write data).
 
-<img src="{{ site.baseurl }}/screenshots/IAM_overview.png" alt="IAM Overview" width="950">
+<img src="screenshots/IAM_overview.png" alt="IAM Overview" width="950">
 
 **Accessing IAM Management:**
 
@@ -395,7 +395,7 @@ Plan your hierarchy before creating the first resource group. Consider whether o
 
 In the left sidebar, you will then find an overview of all available IAM options and settings.
 
-<img src="{{ site.baseurl }}/screenshots/IAM_overview2.png" alt="IAM Overview 2" width="950">
+<img src="screenshots/IAM_overview2.png" alt="IAM Overview 2" width="950">
 
 ---
 
@@ -459,13 +459,13 @@ This group typically receives the highest rights, such as:
 14. Add this second rule as well with a click on `Add`
 15. On the right side, you will now see a summary of the noted policies in the Summary section. Review the selection and finalize the process with a click on `Assign`
 
-<img src="{{ site.baseurl }}/screenshots/admin_agrp1.png" alt="Admin Access Group 1" width="950">
+<img src="screenshots/admin_agrp1.png" alt="Admin Access Group 1" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/admin_agrp2.png" alt="Admin Access Group 2" width="950">
+<img src="screenshots/admin_agrp2.png" alt="Admin Access Group 2" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/admin_agrp3.png" alt="Admin Access Group 3" width="950">
+<img src="screenshots/admin_agrp3.png" alt="Admin Access Group 3" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/admin_agrp4_.png" alt="Admin Access Group 4" width="950">
+<img src="screenshots/admin_agrp4_.png" alt="Admin Access Group 4" width="950">
 
 ---
 
@@ -484,9 +484,9 @@ To grant new employees or users access to your IBM Cloud account, they must be e
 7. Select your Platform Admin `Access group`
 8. Finally, click on `Invite` to invite the users
 
-<img src="{{ site.baseurl }}/screenshots/invite_useres1.png" alt="Invite Users 1" width="950">
+<img src="screenshots/invite_useres1.png" alt="Invite Users 1" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/invite_users2.png" alt="Invite Users 2" width="950">
+<img src="screenshots/invite_users2.png" alt="Invite Users 2" width="950">
 
 ---
 
@@ -524,9 +524,9 @@ Service Access refers to actions that take place within the service, mostly via 
 - A user with the Reader role can download files
 - **But:** They cannot delete the COS instance itself or invite other users to it
 
-<img src="{{ site.baseurl }}/screenshots/platform:service.png" alt="Platform vs Service Access" width="850">
+<img src="screenshots/platform:service.png" alt="Platform vs Service Access" width="850">
 
-<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw_.png" alt="Platform vs Service Access Diagram" width="650">
+<img src="screenshots/platform:service_excalidraw_.png" alt="Platform vs Service Access Diagram" width="650">
 
 ---
 
@@ -554,9 +554,9 @@ You want an operator to be able to restart and stop virtual servers, but they sh
 
 In the subsequent menu, define the role's properties. First, assign a meaningful name and description. Then select the target service and add the desired permissions (Actions) granularly. Once you have selected all actions, finalize the creation via the Create button.
 
-<img src="{{ site.baseurl }}/screenshots/custom_roles_1.png" alt="Custom Roles 1" width="950">
+<img src="screenshots/custom_roles_1.png" alt="Custom Roles 1" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/custom_roles_2.png" alt="Custom Roles 2" width="950">
+<img src="screenshots/custom_roles_2.png" alt="Custom Roles 2" width="950">
 
 ---
 
@@ -590,13 +590,13 @@ Here you define trusted origins. A zone is an "allowlist" and can include:
 2. Select `Context-based restrictions`
 3. Then select the desired area: `Rules` or `Network zones`
 
-<img src="{{ site.baseurl }}/screenshots/cbr1.png" alt="CBR Setup" width="950">
+<img src="screenshots/cbr1.png" alt="CBR Setup" width="950">
 
 ### Network-Based vs. Identity-Based Protection
 
 When does CBR make sense?
 
-<img src="{{ site.baseurl }}/screenshots/cbr2.png" alt="CBR Protection Layers" width="950">
+<img src="screenshots/cbr2.png" alt="CBR Protection Layers" width="950">
 
 A secure cloud architecture uses the "Defense in Depth" principle and combines two fundamental protection layers:
 
@@ -643,7 +643,7 @@ The catalog is the central marketplace and entry point for all services and soft
 1. Click on `Catalog` in the top bar
 2. Browse through the offering of over 300 products via the search bar or use the various filter options
 
-<img src="{{ site.baseurl }}/screenshots/catalog1.png" alt="Catalog Overview" width="950">
+<img src="screenshots/catalog1.png" alt="Catalog Overview" width="950">
 
 ---
 
@@ -662,7 +662,7 @@ Once you have found the desired service in the catalog, perform the following st
 
 **Create:** Once you have made all settings and agree with the displayed price, complete the process with a click on the `Create` button. The resource will now be provisioned.
 
-<img src="{{ site.baseurl }}/screenshots/catalog2.png" alt="Catalog Service Configuration" width="950">
+<img src="screenshots/catalog2.png" alt="Catalog Service Configuration" width="950">
 
 ---
 
@@ -679,9 +679,9 @@ In the now displayed overview, you have various options to efficiently organize 
 - Additionally, you have the **option to edit tags or delete resources directly from the list**
 - Clicking on a resource name opens its individual dashboard. There you access the detailed menu to further **configure, edit, or permanently remove the instance**
 
-<img src="{{ site.baseurl }}/screenshots/catalog4_.png" alt="Resource List" width="950">
+<img src="screenshots/catalog4_.png" alt="Resource List" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/catalog3.png" alt="Resource Management" width="950">
+<img src="screenshots/catalog3.png" alt="Resource Management" width="950">
 
 ---
 
@@ -705,7 +705,7 @@ The central entry point for cost management is the Overview page. It provides a 
 2. Select `Billing and usage`
 3. You land by default directly on the `Overview` tab
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage1.png" alt="Billing Overview" width="950">
+<img src="screenshots/billingandusage1.png" alt="Billing Overview" width="950">
 
 ---
 
@@ -715,7 +715,7 @@ The Usage area is your primary tool for validating the monthly invoice. It allow
 
 **Navigation:** Select the `Usage` option in the left menu under `Billing and usage`
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage2.png" alt="Usage Overview" width="950">
+<img src="screenshots/billingandusage2.png" alt="Usage Overview" width="950">
 
 ### The Analysis Workflow (Drill-down)
 
@@ -727,7 +727,7 @@ Select the desired month in the top right. Then change the view at "Group by" to
 
 **Result:** You immediately see what costs the selected resource group incurred in this month.
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage3.png" alt="Usage by Resource Group" width="950">
+<img src="screenshots/billingandusage3.png" alt="Usage by Resource Group" width="950">
 
 **Check Usage by Service, Plan, and Region:**
 
@@ -735,9 +735,9 @@ Click on `View plans` to view the usage of a service (You can also directly sele
 
 **Result:** You see at a glance the used plan (e.g., Standard or Enterprise) and the region (e.g., Frankfurt) where the costs were incurred. You can also apply the filter here to a specific month and resource group.
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage4.png" alt="Usage by Service" width="950">
+<img src="screenshots/billingandusage4.png" alt="Usage by Service" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage5.png" alt="Usage by Plan" width="950">
+<img src="screenshots/billingandusage5.png" alt="Usage by Plan" width="950">
 
 **Analyze Consumption Units:**
 
@@ -749,9 +749,9 @@ Click on `View details` for a service.
 - MILLION_API_CALLS (How often was the service accessed?)
 - IP_HOURS (Costs for reserved IPs)
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage6_.png" alt="Consumption Units" width="950">
+<img src="screenshots/billingandusage6_.png" alt="Consumption Units" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage7.png" alt="Billing Metrics" width="950">
+<img src="screenshots/billingandusage7.png" alt="Billing Metrics" width="950">
 
 **Deep Analysis at Instance Level:**
 
@@ -761,9 +761,9 @@ To know exactly which specific instance (resource group) is responsible for whic
 
 **Summary:** In the Usage area, you move from "big to small": From the resource group via the service plan to the technical metrics and finally to the individual instance.
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage8.png" alt="Instance Details" width="950">
+<img src="screenshots/billingandusage8.png" alt="Instance Details" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage9.png" alt="Cost Breakdown" width="950">
+<img src="screenshots/billingandusage9.png" alt="Cost Breakdown" width="950">
 
 **Tip:** You can export the expenses of all levels as CSV by clicking on `Export CSV` in the upper right field.
 
@@ -792,7 +792,7 @@ To tailor the cost analysis precisely to your question, the sidebar offers a var
 
 **Group by:** At the top, you can specify via Group by how the data should be summarized in the chart (e.g., costs grouped by resource group or service) to immediately capture trends visually.
 
-<img src="{{ site.baseurl }}/screenshots/costanalysis.png" alt="Cost Analysis" width="950">
+<img src="screenshots/costanalysis.png" alt="Cost Analysis" width="950">
 
 **Difference from Usage:**
 
@@ -812,7 +812,7 @@ So you don't have to actively check the dashboard daily, IBM Cloud offers Spendi
 2. Select the `Spending notifications` option in the left menu
 3. Click on the `Create` button
 
-<img src="{{ site.baseurl }}/screenshots/spending_notifications1.png" alt="Spending Notifications" width="950">
+<img src="screenshots/spending_notifications1.png" alt="Spending Notifications" width="950">
 
 ### Configuring the Alert
 
@@ -822,7 +822,7 @@ So you don't have to actively check the dashboard daily, IBM Cloud offers Spendi
 
 Finally confirm the setup with a click on `Create`.
 
-<img src="{{ site.baseurl }}/screenshots/spending_notifications2.png" alt="Configure Spending Notifications" width="950">
+<img src="screenshots/spending_notifications2.png" alt="Configure Spending Notifications" width="950">
 
 ---
 
@@ -832,7 +832,7 @@ Finally confirm the setup with a click on `Create`.
 
 An Enterprise Account is an **administrative hierarchy** that enables large organizations to consolidate multiple IBM Cloud Accounts under one central umbrella. This significantly simplifies management, billing, and governance.
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountArch.png" alt="Enterprise Account Architecture" width="950">
+<img src="screenshots/EnterpriseAccountArch.png" alt="Enterprise Account Architecture" width="950">
 
 ### The advantages and functions are divided into three main areas:
 
@@ -846,7 +846,7 @@ The Enterprise Account acts as the central payment point for all subordinate acc
 
 **Downstream visibility:** Although the invoice is paid centrally, the system offers full transparency about the consumption of individual accounts. The company can thus precisely determine which department or project caused which costs and charge them internally.
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountCreditPool.png" alt="Credit Pooling" width="950">
+<img src="screenshots/EnterpriseAccountCreditPool.png" alt="Credit Pooling" width="950">
 
 ### Flexible Account Hierarchy
 
@@ -858,9 +858,9 @@ You can map your company's structure exactly in the cloud.
 
 **Unified Support:** The support level (e.g., Premium or Advanced) is set centrally and automatically applies to every account within the hierarchy.
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountRessources2.png" alt="Account Hierarchy" width="950">
+<img src="screenshots/EnterpriseAccountRessources2.png" alt="Account Hierarchy" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountRessources.png" alt="Resource Management" width="950">
+<img src="screenshots/EnterpriseAccountRessources.png" alt="Resource Management" width="950">
 
 ### Governance and Security
 
@@ -868,7 +868,7 @@ The Enterprise Account provides a central control level for policies.
 
 **Central Policies:** You can define governance rules and access policies (IAM) centrally and inherit them downward. This ensures that security standards are maintained company-wide without having to configure each account individually.
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountGovernance.png" alt="Governance" width="950">
+<img src="screenshots/EnterpriseAccountGovernance.png" alt="Governance" width="950">
 
 ---
 
@@ -876,11 +876,11 @@ The Enterprise Account provides a central control level for policies.
 
 ### Automotive Manufacturer
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountCarco_.png" alt="Automotive Example" width="950">
+<img src="screenshots/EnterpriseAccountCarco_.png" alt="Automotive Example" width="950">
 
 ### Business Partner with End Customers
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountBP_.png" alt="Business Partner Example" width="1000">
+<img src="screenshots/EnterpriseAccountBP_.png" alt="Business Partner Example" width="1000">
 
 ---
 
@@ -898,7 +898,7 @@ The Support Center is your central point of contact for all technical inquiries,
 
 - **FAQs & Documentation:** Before opening a ticket, you can use the integrated search to research known solutions and best practices in the knowledge base
 
-<img src="{{ site.baseurl }}/screenshots/SupportCenter.png" alt="Support Center" width="1250">
+<img src="screenshots/SupportCenter.png" alt="Support Center" width="1250">
 
 ---
 
@@ -940,7 +940,7 @@ The Cost Estimator is a planning tool that helps you calculate the expected cost
 - **Comparison:** Compare different configurations and pricing plans
 - **Export:** Save and share your estimates with stakeholders
 
-<img src="{{ site.baseurl }}/screenshots/CostEstimator.png" alt="Cost Estimator" width="950">
+<img src="screenshots/CostEstimator.png" alt="Cost Estimator" width="950">
 
 ---
 
@@ -958,9 +958,9 @@ IBM Cloud provides comprehensive documentation for all services and features.
 - **Troubleshooting:** Solutions to common problems
 - **Release Notes:** Information about new features and updates
 
-<img src="{{ site.baseurl }}/screenshots/Docs.png" alt="Documentation" width="950">
+<img src="screenshots/Docs.png" alt="Documentation" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/Docs2.png" alt="Documentation Details" width="950">
+<img src="screenshots/Docs2.png" alt="Documentation Details" width="950">
 
 ---
 
@@ -993,7 +993,7 @@ Der erste Schritt um mit der IBM Cloud zu arbeiten ist die Anmeldung im IBM Clou
 2. Geben Sie ihre Zugangsdaten (Benutzername und Passwort) ein
 3. Bestätigen Sie die Anmeldung, um Zugriff auf das IBM Cloud Dashboard zu erhalten
 
-<img src="{{ site.baseurl }}/screenshots/IBMCloud_Login.png" alt="IBM Cloud Login" width="450">
+<img src="screenshots/IBMCloud_Login.png" alt="IBM Cloud Login" width="450">
 
 
 
@@ -1014,9 +1014,9 @@ Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr di
 - **Either**, MFA für federated und non-federated User aktivieren
 
 
-<img src="{{ site.baseurl }}/screenshots/MFA1:2.png" alt="MFA" width="950">
+<img src="screenshots/MFA1:2.png" alt="MFA" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/MFA2:2.png" alt="MFA" width="950">
+<img src="screenshots/MFA2:2.png" alt="MFA" width="950">
 
 
 
@@ -1038,9 +1038,9 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 2. Wählen Sie den Unterpunkt `Account`
 3. Klicken Sie in der Seitenleiste auf `Account Settings`
 
-<img src="{{ site.baseurl }}/screenshots/Settins1-2.png" alt="AccSettings" width="950">
+<img src="screenshots/Settins1-2.png" alt="AccSettings" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/Settings2-2_.png" alt="AccSettings" width="950">
+<img src="screenshots/Settings2-2_.png" alt="AccSettings" width="950">
 
 
 # 2. Arbeiten mit Ressourcengruppen
@@ -1049,11 +1049,11 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 
 Ressourcengruppen sind **logische Container**, die zusammengehörige Cloud-Ressourcen (VMs, Datenbanken etc.) organisieren. Sie dienen als zentrale Ankerpunkte, um **IAM-Zugriffsrichtlinien auf die gesamte Gruppe anzuwenden** und so die Berechtigungsverwaltung zu vereinfachen. Zudem ermöglichen sie eine **klare Kostenverfolgung (Billing)** und die **einfache, isolierte Verwaltung** des gesamten Lebenszyklus der enthaltenen Ressourcen.
 
-<img src="{{ site.baseurl }}/screenshots/Ressourcengruppen.png" alt="Ressoucengruppen_explained" width="950">
+<img src="screenshots/Ressourcengruppen.png" alt="Ressoucengruppen_explained" width="950">
 
 Der physische Standort der Ressourcen ist für die Gruppierung dabei irrelevant. Eine Ressourcengruppe kann Ressourcen enthalten, die über verschiedene geografische Zonen und Regionen verteilt bereitgestellt wurden.
 
-<img src="{{ site.baseurl }}/screenshots/res_grp_zonen.png" alt="Ressoucengruppen_explained" width="750">
+<img src="screenshots/res_grp_zonen.png" alt="Ressoucengruppen_explained" width="750">
 
 
 ## 2.2 Ressourcengruppen anlegen
@@ -1068,7 +1068,7 @@ Planen Sie Ihre Hierarchie, bevor Sie die erste Ressourcengruppe anlegen. Überl
 5. Auf der rechten Seite können Sie nun auf `Create +` klicken
 
 
-<img src="{{ site.baseurl }}/screenshots/create_rc_grp_.png" alt="Ressoucengruppen_explained" width="950">
+<img src="screenshots/create_rc_grp_.png" alt="Ressoucengruppen_explained" width="950">
 
 
 
@@ -1095,7 +1095,7 @@ Planen Sie Ihre Hierarchie, bevor Sie die erste Ressourcengruppe anlegen. Überl
 - **Roles:** Definieren die spezifisch erlaubten Aktionen. IBM unterscheidet dabei zwischen `Plattform-Rollen` (Verwaltung des COS, z. B. Erstellen/Löschen) und `Service-Rollen` (Nutzung des COS , z. B. Daten lesen/schreiben).
 
 
-<img src="{{ site.baseurl }}/screenshots/IAM_overview.png" alt="IAM_overview" width="950">
+<img src="screenshots/IAM_overview.png" alt="IAM_overview" width="950">
 
 
 ### Zugriff auf die IAM-Verwaltung:
@@ -1104,7 +1104,7 @@ Planen Sie Ihre Hierarchie, bevor Sie die erste Ressourcengruppe anlegen. Überl
 
 In der linken Seitenleiste finden Sie anschließend eine Übersicht aller verfügbaren IAM-Optionen und Einstellungen
 
-<img src="{{ site.baseurl }}/screenshots/IAM_overview2.png" alt="IAM_overview" width="950">
+<img src="screenshots/IAM_overview2.png" alt="IAM_overview" width="950">
 
 
 
@@ -1165,13 +1165,13 @@ Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
 15. Auf der rechten Seite sehen Sie nun im Bereich Summary eine Zusammenfassung der vorgemerkten Richtlinien. Überprüfen Sie die Auswahl und schließen Sie den Vorgang mit einem Klick auf `Assign` endgültig ab
 
 
-<img src="{{ site.baseurl }}/screenshots/admin_agrp1.png" alt="IAM_overview" width="950">
+<img src="screenshots/admin_agrp1.png" alt="IAM_overview" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/admin_agrp2.png" alt="IAM_overview" width="950">
+<img src="screenshots/admin_agrp2.png" alt="IAM_overview" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/admin_agrp3.png" alt="IAM_overview" width="950">
+<img src="screenshots/admin_agrp3.png" alt="IAM_overview" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/admin_agrp4_.png" alt="IAM_overview" width="950">
+<img src="screenshots/admin_agrp4_.png" alt="IAM_overview" width="950">
 
 
 
@@ -1191,9 +1191,9 @@ Befolgen Sie dazu folgende Schritte:
 9. Klicken Sie zuletzt auf `Invite` um die User einzuladen
 
 
-<img src="{{ site.baseurl }}/screenshots/invite_useres1.png" alt="user_invite1" width="950">
+<img src="screenshots/invite_useres1.png" alt="user_invite1" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/invite_users2.png" alt="user_invite2" width="950">
+<img src="screenshots/invite_users2.png" alt="user_invite2" width="950">
 
 
 
@@ -1233,10 +1233,10 @@ Der Service Access bezieht sich auf Aktionen, die innerhalb des Services stattfi
 - **Aber:** Er kann die COS-Instanz selbst nicht löschen oder andere Benutzer dazu einladen
 
 
-<img src="{{ site.baseurl }}/screenshots/platform:service.png" alt="platform/service" width="950">
+<img src="screenshots/platform:service.png" alt="platform/service" width="950">
 
 
-<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw_.png" alt="platform/service" width="650">
+<img src="screenshots/platform:service_excalidraw_.png" alt="platform/service" width="650">
 
 
 
@@ -1264,9 +1264,9 @@ Sie möchten, dass ein Operator virtuelle Server neu starten und stoppen darf, a
 Im anschließenden Menü definieren Sie die Eigenschaften der Rolle. Vergeben Sie zunächst einen aussagekräftigen Namen und eine Beschreibung. Wählen Sie danach den Ziel-Service aus und fügen Sie die gewünschten Berechtigungen (Actions) granular hinzu. Sobald Sie alle Aktionen ausgewählt haben, bestätigen Sie die Erstellung abschließend über den Button Create.
 
 
-<img src="{{ site.baseurl }}/screenshots/custom_roles_1.png" alt="platform/service" width="950">
+<img src="screenshots/custom_roles_1.png" alt="platform/service" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/custom_roles_2.png" alt="platform/service" width="950">
+<img src="screenshots/custom_roles_2.png" alt="platform/service" width="950">
 
 
 
@@ -1300,13 +1300,13 @@ Service References (um Cloud-Services untereinander zu autorisieren)
 2. Wählen Sie den Eintrag `Context-based restrictions`
 3. Wählen Sie anschließend den gewünschten Bereich: `Rules` oder `Network zones`
 
- <img src="{{ site.baseurl }}/screenshots/cbr1.png" alt="platform/cbr1" width="950">
+ <img src="screenshots/cbr1.png" alt="platform/cbr1" width="950">
 
  &nbsp;
 
 ### Network-Based vs. Identity-Based Protection - wann macht CBR Sinn?
 
- <img src="{{ site.baseurl }}/screenshots/cbr2.png" alt="platform/cbr2" width="950">
+ <img src="screenshots/cbr2.png" alt="platform/cbr2" width="950">
 
  &nbsp;
 
@@ -1359,7 +1359,7 @@ Um zum Katalog zu gelangen, gehen Sie wie folgt vor:
 1. Klicken Sie in der oberen Leiste auf Catalog
 2. Durchsuchen Sie das Angebot von über 300 Produkten über die Suchleiste oder nutzen Sie die verschiedenen Filtermöglichkeiten
 
-<img src="{{ site.baseurl }}/screenshots/catalog1.png" alt="catalog1" width="950">
+<img src="screenshots/catalog1.png" alt="catalog1" width="950">
 
 
 
@@ -1381,7 +1381,7 @@ Sobald Sie den gewünschten Service im Katalog gefunden haben, führen Sie die f
 **Erstellen:** Sobald Sie alle Einstellungen vorgenommen haben und mit dem angezeigten Preis einverstanden sind, schließen Sie den Vorgang mit einem Klick auf den Button `Create` ab. Die Ressource wird nun provisioniert.
 
 
-<img src="{{ site.baseurl }}/screenshots/catalog2.png" alt="catalog2" width="950">
+<img src="screenshots/catalog2.png" alt="catalog2" width="950">
 
 
 
@@ -1402,9 +1402,9 @@ In der nun angezeigten Übersicht haben Sie diverse Möglichkeiten, Ihre Ressour
 - Ein Klick auf den Namen einer Ressource öffnet deren individuelles Dashboard. Dort gelangen Sie in das detaillierte Menü, um die Instanz weiter zu **konfigurieren, zu bearbeiten oder sie endgültig zu entfernen**.
 
 
-<img src="{{ site.baseurl }}/screenshots/catalog4_.png" alt="catalog2" width="950">
+<img src="screenshots/catalog4_.png" alt="catalog2" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/catalog3.png" alt="catalog2" width="950">
+<img src="screenshots/catalog3.png" alt="catalog2" width="950">
 
 
 # 5. Billing and Usage 
@@ -1436,7 +1436,7 @@ Navigation zu Billing and Usage:
 2. Wählen Sie `Billing and usage`
 3. Sie landen standardmäßig direkt auf dem Reiter `Overview`
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage1.png" alt="billingandusage1" width="950">
+<img src="screenshots/billingandusage1.png" alt="billingandusage1" width="950">
 
 
 
@@ -1445,7 +1445,7 @@ Der Bereich Usage ist Ihr primäres Werkzeug, um die monatliche Rechnung zu vali
 
 **Navigation:** Wählen Sie im linken Menü unter `Billing and usage` den Punkt `Usage`
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage2.png" alt="billingandusage2" width="950">
+<img src="screenshots/billingandusage2.png" alt="billingandusage2" width="950">
 
 
 
@@ -1458,7 +1458,7 @@ Wählen Sie oben rechts den gewünschten Monat. Ändern Sie anschließend die An
 ### Ergebnis:
 Sie sehen sofort, welche Kosten die gewählte Ressourcengruppe in diesem Monat verursacht hat
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage3.png" alt="billingandusage3" width="950">
+<img src="screenshots/billingandusage3.png" alt="billingandusage3" width="950">
 
 
 
@@ -1470,9 +1470,9 @@ Klicken Sie auf `View plans`, um die Usage eines Services einzusehen
 ### Ergebnis:
 Sie sehen auf einen Blick den genutzten Plan (z. B. Standard oder Enterprise) und die Region (z. B. Frankfurt), in der die Kosten angefallen sind. Sie können auch hier den Filter wieder auf einen bestimmten Monat und Resourcengruppe legen
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage4.png" alt="billingandusage4" width="950">
+<img src="screenshots/billingandusage4.png" alt="billingandusage4" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage5.png" alt="billingandusage5" width="950">
+<img src="screenshots/billingandusage5.png" alt="billingandusage5" width="950">
 
 
 
@@ -1488,9 +1488,9 @@ MILLION_API_CALLS (Wie oft wurde der Service angesprochen?)
 
 IP_HOURS (Kosten für reservierte IPs).
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage6_.png" alt="billingandusage6" width="950">
+<img src="screenshots/billingandusage6_.png" alt="billingandusage6" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage7.png" alt="billingandusage7" width="950">
+<img src="screenshots/billingandusage7.png" alt="billingandusage7" width="950">
 
 
 
@@ -1504,9 +1504,9 @@ Sie bohren noch eine Ebene tiefer. Jetzt sehen Sie jede einzelne Instanz(Resourc
 ### Zusammenfassung:
 Im Bereich Usage bewegen Sie sich vom "Großen ins Kleine": Von der Ressourcengruppe über den Service-Plan hin zu den technischen Metriken und schließlich zur einzelnen Instanz.
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage8.png" alt="billingandusage8" width="950">
+<img src="screenshots/billingandusage8.png" alt="billingandusage8" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/billingandusage9.png" alt="billingandusage9" width="950">
+<img src="screenshots/billingandusage9.png" alt="billingandusage9" width="950">
 
 
 **Tipp:** Sie können sich die Ausgaben aller Ebenen als CSV ausgeben lassen indem Sie auf `Export CSV` im rechten oberen Feld klicken.
@@ -1544,7 +1544,7 @@ Um die Kostenanalyse genau auf Ihre Fragestellung zuzuschneiden, bietet die Seit
 ### Group by:
 Ganz oben können Sie über Group by festlegen, wie die Daten im Diagramm zusammengefasst werden sollen (z. B. Kosten gruppiert nach Ressourcengruppe oder Service), um Trends sofort visuell zu erfassen.
 
-<img src="{{ site.baseurl }}/screenshots/costanalysis.png" alt="costanalysis" width="950">
+<img src="screenshots/costanalysis.png" alt="costanalysis" width="950">
 
 
 ### Unterschied zu Usage:
@@ -1563,7 +1563,7 @@ Damit Sie nicht täglich aktiv das Dashboard überprüfen müssen, bietet IBM Cl
 2. Wählen Sie im linken Menü den Punkt `Spending notifications`
 3. Klicken Sie auf den Button `Create`
 
-<img src="{{ site.baseurl }}/screenshots/spending_notifications1.png" alt="spending_notifications1" width="950">
+<img src="screenshots/spending_notifications1.png" alt="spending_notifications1" width="950">
 
 
 
@@ -1582,7 +1582,7 @@ Legen Sie einen Geldbetrag fest (z. B. 500 USD). Sie können dann einstellen, be
 Bestätigen Sie die Einrichtung abschließend mit einem Klick auf `Create`
 
 
-<img src="{{ site.baseurl }}/screenshots/spending_notifications2.png" alt="spending_notifications2" width="950">
+<img src="screenshots/spending_notifications2.png" alt="spending_notifications2" width="950">
 
 
 # 6. Enterprise Accounts 
@@ -1591,7 +1591,7 @@ Bestätigen Sie die Einrichtung abschließend mit einem Klick auf `Create`
 
 Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Organisationen ermöglicht, mehrere IBM Cloud Accounts unter einem zentralen Dach zusammenzufassen. Dies vereinfacht die Verwaltung, Abrechnung und Governance erheblich.
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountArch.png" alt="EnterpriseBasics1" width="950">
+<img src="screenshots/EnterpriseAccountArch.png" alt="EnterpriseBasics1" width="950">
 
 
 ### Die Vorteile und Funktionen gliedern sich in drei Hauptbereiche:
@@ -1611,7 +1611,7 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
     
     Obwohl die Rechnung zentral bezahlt wird, bietet das System volle Transparenz über den Verbrauch der einzelnen Accounts. Das Unternehmen kann so genau ermitteln, welche Abteilung oder welches Projekt wie viele Kosten verursacht hat, und diese intern weiterverrechnen.
 
-    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountCreditPool.png" alt="EnterpriseBasicsCreditPool" width="950">
+    <img src="screenshots/EnterpriseAccountCreditPool.png" alt="EnterpriseBasicsCreditPool" width="950">
 
     &nbsp;
 
@@ -1632,11 +1632,11 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
     
     Das Support-Level (z. B. Premium oder Advanced) wird zentral festgelegt und gilt automatisch für jeden Account innerhalb der Hierarchie.
 
-    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountRessources2.png" alt="EnterpriseBasicsRessources2" width="950">
+    <img src="screenshots/EnterpriseAccountRessources2.png" alt="EnterpriseBasicsRessources2" width="950">
 
     &nbsp;
 
-    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountRessources.png" alt="EnterpriseBasicsRessources" width="950">
+    <img src="screenshots/EnterpriseAccountRessources.png" alt="EnterpriseBasicsRessources" width="950">
 
     &nbsp;
 
@@ -1648,7 +1648,7 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
     
     Sie können Governance-Regeln und Zugriffsrichtlinien (IAM) zentral definieren und nach unten vererben. Dies stellt sicher, dass Sicherheitsstandards unternehmensweit eingehalten werden, ohne jeden Account einzeln konfigurieren zu müssen.
 
-    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountGovernance.png" alt="EnterpriseBasicsGovernance" width="950">
+    <img src="screenshots/EnterpriseAccountGovernance.png" alt="EnterpriseBasicsGovernance" width="950">
 
     
 
@@ -1658,14 +1658,14 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
 - **Automobilhersteller**
 
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountCarco_.png" alt="EnterpriseAccountCarco" width="950">
+<img src="screenshots/EnterpriseAccountCarco_.png" alt="EnterpriseAccountCarco" width="950">
 
 
 
 - **Business Partner mit Endkunden**
 
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountBP_.png" alt="EnterpriseAccountBP" width="1000">
+<img src="screenshots/EnterpriseAccountBP_.png" alt="EnterpriseAccountBP" width="1000">
 
 
 # 7. Zusätzliche Informationen
@@ -1686,7 +1686,7 @@ Klicken Sie in der oberen Navigationsleiste auf `Help` und dann den Menüpunkt `
     Bevor Sie ein Ticket eröffnen, können Sie die integrierte Suche nutzen, um in der Wissensdatenbank nach bekannten Lösungen und Best Practices zu recherchieren.
 
 
-<img src="{{ site.baseurl }}/screenshots/SupportCenter.png" alt="SupportCenter" width="1250">
+<img src="screenshots/SupportCenter.png" alt="SupportCenter" width="1250">
 
 
 
@@ -1715,7 +1715,7 @@ Prüfen Sie das Notification Center regelmäßig auf Meldungen der Kategorien Hi
     
     Hier prüfen Sie nicht nur die aktuelle Verfügbarkeit aller Services (Overview), sondern erhalten auch Einblick in **geplante Wartungsarbeiten** (Planned maintenance), **kritische Sicherheitswarnungen** (Security bulletins), **Ursachenberichte zu vergangenen Störungen** (Incident reports), sowie **Release Notes** und **Announcements**
 
-<img src="{{ site.baseurl }}/screenshots/Notifications.png" alt="Notifications" width="950">
+<img src="screenshots/Notifications.png" alt="Notifications" width="950">
 
 
 
@@ -1740,7 +1740,7 @@ Stellen Sie die Anzeige auf Ihre lokale Währung um.
 ### Export:
 Über den Button Download CSV/XLSX oder Print/PDF können Sie einen offiziellen Kostenvoranschlag generieren, um diesen beispielsweise an die Finanzabteilung zur Freigabe weiterzuleiten.
 
-<img src="{{ site.baseurl }}/screenshots/CostEstimator.png" alt="CostEstimator" width="950">
+<img src="screenshots/CostEstimator.png" alt="CostEstimator" width="950">
 
 
 
@@ -1768,9 +1768,9 @@ Für Entwickler und Automatisierung sind hier alle Befehle, Endpunkte und SDKs d
 ### Troubleshooting:
 Bevor Sie ein Support-Ticket eröffnen, finden Sie im Bereich "Troubleshooting" oft schnelle Lösungen für gängige Fehlermeldungen und Konfigurationsprobleme.
 
-<img src="{{ site.baseurl }}/screenshots/Docs.png" alt="Docs1" width="950">
+<img src="screenshots/Docs.png" alt="Docs1" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/Docs2.png" alt="Docs2" width="950">
+<img src="screenshots/Docs2.png" alt="Docs2" width="950">
 
 
 # 8. Best practices

@@ -1,43 +1,62 @@
+# TTA-Advantage
 
+IBM Cloud Administration Basics Workshop
 
-## **Login im IBM Cloud Portal**
+## Repository Structure
 
-Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Portal.
+```
+TTA-Advantage/
+├── docs/                          # GitHub Pages content
+│   ├── index.md                   # Main workshop page (bilingual EN/DE)
+│   ├── _config.yml                # Jekyll configuration
+│   └── screenshots/               # All workshop screenshots
+├── basics-instructions/           # Additional instruction materials
+├── drafts/                        # Work in progress (excluded from git)
+└── README.md                      # This file
+```
 
-1. Öffnen Sie die Login-Seite: [IBM Cloud Login](cloud.ibm.com/login)
-2. Geben Sie ihre Zugangsdaten (Benutzername und Passwort) ein.
-3. Bestätigen Sie die Anmeldung, um Zugriff auf das IBM Cloud Dashboard zu erhalten
+## GitHub Pages Setup
 
-![IBM Cloud Login](/screenshots/IBMCloud_Login.png)
+This repository uses the `/docs` folder for GitHub Pages.
 
-## Multi-Faktor-Authentisierung (MFA) aktivieren
+### Configuration Steps:
 
-Nachdem wir uns im IBM Cloud Account angemeldet haben 
+1. Go to your GitHub repository settings
+2. Navigate to **Pages** section
+3. Under **Source**, select:
+   - Branch: `main`
+   - Folder: `/docs`
+4. Click **Save**
 
-## Zeile eins
+The site will be published at: `https://[username].github.io/TTA-Advantage/`
 
-### test
+### Local Development
 
+To test the site locally:
 
-- [ ] Test 
+```bash
+cd docs
+bundle install
+bundle exec jekyll serve
+```
 
-----
+Then open `http://localhost:4000/TTA-Advantage/` in your browser.
 
-**This is a test text**
+## Content
 
-[Contribution guidelines for this project](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+The workshop covers:
+- IBM Cloud Portal basics
+- Multi-Factor Authentication (MFA)
+- Resource Groups
+- Identity and Access Management (IAM)
+- Billing and Usage
+- Enterprise Accounts
+- Best Practices
 
->[!NOTE]
->Useful information that users should know, even when skimming content.
+## Language Support
 
-> [!TIP]
-> Helpful advice for doing things better or more easily.
+The workshop content is available in both English and German with a language toggle button.
 
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
+## Author
 
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
+Felix Janakow (felix.janakow@ibm.com)
