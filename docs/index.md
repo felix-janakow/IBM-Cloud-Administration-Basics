@@ -269,9 +269,12 @@ window.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!-- ENGLISH VERSION -->
-<div class="lang-en" markdown="1">
+{::options parse_block_html="true" /}
+
+<div class="lang-en">
 
 # 1. First Steps
+{: .lang-en}
 
 ## 1.1 Login to IBM Cloud Portal
 
@@ -981,9 +984,10 @@ IBM Cloud provides comprehensive documentation for all services and features.
 </div>
 
 <!-- GERMAN VERSION -->
-<div class="lang-de" markdown="1">
+<div class="lang-de">
 
 # 1. Erste Schritte
+{: .lang-de}
 
 ## 1.1 Login im IBM Cloud Portal
 
