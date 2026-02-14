@@ -19,10 +19,6 @@ minima:
 # Weitere Einstellungen
 show_excerpts: false
 
-# Seitenreihenfolge
-header_pages:
- - index.md
-
 # Dateien von der Verarbeitung ausschließen
 exclude:
   - README.md
