@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Cloud Administration Basics I 
+layout: home
+title: IBM Cloud Administration Basics I
 ---
 
 <style>
