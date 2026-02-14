@@ -2,61 +2,43 @@
 
 IBM Cloud Administration Basics Workshop
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```
 TTA-Advantage/
-├── docs/                          # GitHub Pages content
-│   ├── index.md                   # Main workshop page (bilingual EN/DE)
-│   ├── _config.yml                # Jekyll configuration
-│   └── screenshots/               # All workshop screenshots
-├── basics-instructions/           # Additional instruction materials
-├── drafts/                        # Work in progress (excluded from git)
-└── README.md                      # This file
+│
+├── 📄 README.md                    # This file - Repository overview
+├── 📄 .gitignore                   # Git ignore rules
+│
+├── 📂 docs/                        # 🌐 GitHub Pages Website
+│   ├── 📄 index.md                 # Main workshop page (bilingual EN/DE)
+│   ├── 📄 _config.yml              # Jekyll configuration
+│   └── 📂 screenshots/             # All workshop screenshots (49 images)
+│       ├── 🖼️ IBMCloud_Login.png
+│       ├── 🖼️ MFA1:2.png
+│       ├── 🖼️ IAM_overview.png
+│       └── ...
+│
+├── 📂 basics-instructions/         # 📚 Additional Materials
+│   └── 📄 COS.md                   # Cloud Object Storage instructions
+│
+└── 📂 drafts/                      # 🚧 Work in Progress
+    └── (excluded from git)         # Draft content not published
 ```
 
-## GitHub Pages Setup
+## 📍 What's Where
 
-This repository uses the `/docs` folder for GitHub Pages.
+| Location | Content | Purpose |
+|----------|---------|---------|
+| **`/docs`** | Complete workshop website | Published via GitHub Pages |
+| **`/docs/index.md`** | Main workshop content | Bilingual (EN/DE) tutorial |
+| **`/docs/screenshots/`** | All images | Visual aids for workshop |
+| **`/basics-instructions`** | Supplementary materials | Additional learning resources |
+| **`/drafts`** | Unpublished content | Work in progress (gitignored) |
 
-### Configuration Steps:
+## 🎯 Quick Navigation
 
-1. Go to your GitHub repository settings
-2. Navigate to **Pages** section
-3. Under **Source**, select:
-   - Branch: `main`
-   - Folder: `/docs`
-4. Click **Save**
-
-The site will be published at: `https://[username].github.io/TTA-Advantage/`
-
-### Local Development
-
-To test the site locally:
-
-```bash
-cd docs
-bundle install
-bundle exec jekyll serve
-```
-
-Then open `http://localhost:4000/TTA-Advantage/` in your browser.
-
-## Content
-
-The workshop covers:
-- IBM Cloud Portal basics
-- Multi-Factor Authentication (MFA)
-- Resource Groups
-- Identity and Access Management (IAM)
-- Billing and Usage
-- Enterprise Accounts
-- Best Practices
-
-## Language Support
-
-The workshop content is available in both English and German with a language toggle button.
-
-## Author
-
-Felix Janakow (felix.janakow@ibm.com)
+- **Workshop Content**: `/docs/index.md`
+- **Configuration**: `/docs/_config.yml`
+- **Images**: `/docs/screenshots/`
+- **Extra Materials**: `/basics-instructions/`
