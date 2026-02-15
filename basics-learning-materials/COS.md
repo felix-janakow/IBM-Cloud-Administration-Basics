@@ -48,7 +48,7 @@ Example:
                     Erasure Coding
                             ↓
 ┌──────────────────────────────────────────────────────────────┐
-│  Split into 12 data slices + 4 parity slices = 16 slices   │
+│  Split into 12 data slices + 4 parity slices = 16 slices     │
 └──────────────────────────────────────────────────────────────┘
                             ↓
         ┌───────────────────┼───────────────────┐
@@ -300,8 +300,8 @@ Understanding the difference is critical for proper data protection:
 │                    Backup Vault                             │
 │              (Immutable, separate resource)                 │
 │                                                             │
-│  Recovery Range: Last 30 days (configurable)               │
-│  RPO: 1 hour (maximum data loss)                           │
+│  Recovery Range: Last 30 days (configurable)                │
+│  RPO: 1 hour (maximum data loss)                            │
 └─────────────────────────────────────────────────────────────┘
                             ↓
                   Restore Operation
