@@ -1,10 +1,10 @@
-# IBM Cloud Administration Basics -- Repo Overview 
+# IBM Cloud Administration Basics --- Repository Overview 
 
 ## Quick Navigation
 
-
 - [**IBM Cloud Administration Basics 1**](https://felix-janakow.github.io/IBM-Cloud-Administration-Basics-1/)
 - [**Learning Materials per topic**](https://github.com/felix-janakow/IBM-Cloud-Administration-Basics-1/tree/main/basics-learning-materials)
+
 
 ## Repository Structure
 
@@ -27,4 +27,3 @@ TTA-Advantage/
 │   └── COS.md                      # COS learnings
     └── ...                         
 ```
-|
