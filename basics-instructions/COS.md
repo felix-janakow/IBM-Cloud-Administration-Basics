@@ -1238,47 +1238,12 @@ Backup policies create continuous, immutable copies of your bucket data in a sep
 - Implement least-privilege access controls
 - Test backup and restore procedures regularly
 
-### Next Steps
-
-**Immediate Actions:**
-1. Create test bucket with Smart Tier storage class
-2. Upload sample data and monitor access patterns
-3. Configure lifecycle policies for cost optimization
-4. Enable Activity Tracker and Monitoring
-
-**Short-Term (1-2 Weeks):**
-1. Migrate existing data to appropriate storage classes
-2. Implement backup policies for critical buckets
-3. Set up IAM policies and access controls
-4. Configure encryption with Key Protect
-
-**Long-Term (1-3 Months):**
-1. Review and optimize storage costs monthly
-2. Implement disaster recovery procedures
-3. Train team on bucket management
-4. Establish governance and compliance policies
-
-### Additional Learning Resources
-
-**Hands-On Labs:**
-- Practice bucket creation with different configurations
-- Test lifecycle policies with sample data
-- Simulate disaster recovery scenarios
-- Experiment with Aspera high-speed transfer
-
-**Advanced Topics to Explore:**
-- Bucket replication for multi-region deployments
-- Static website hosting with custom domains
-- Integration with IBM Cloud Functions
-- Advanced IAM policies and context-based restrictions
-
 ---
 
 ## 11. Official Documentation and Resources
 
 ### Core Documentation
 
-- [IBM Cloud Object Storage Overview](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage)
 - [Getting Started with IBM Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)
 - [Storage Classes and Pricing](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-classes)
 - [Bucket Configuration](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-provision)
@@ -1292,7 +1257,7 @@ Backup policies create continuous, immutable copies of your bucket data in a sep
 
 ### Security and Compliance
 
-- [IAM Access Management](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam)
+- [IAM Access Management](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-with-iam)
 - [Encryption and Key Management](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-encryption)
 - [Object Lock and Immutability](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-immutable)
 - [Activity Tracker Events](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-at-events)
@@ -1300,7 +1265,7 @@ Backup policies create continuous, immutable copies of your bucket data in a sep
 ### Operations and Monitoring
 
 - [Endpoints and Locations](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints)
-- [Monitoring Metrics](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-monitoring-cos)
+- [Monitoring Metrics](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-mm-cos-integration&interface=ui)
 - [Lifecycle Policies](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-expiry)
 - [Bucket Replication](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-replication-overview)
 
@@ -1310,12 +1275,6 @@ Backup policies create continuous, immutable copies of your bucket data in a sep
 - [REST API Reference](https://cloud.ibm.com/apidocs/cos/cos-compatibility)
 - [CLI Plugin](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli)
 
-### Support and Community
-
-- [IBM Cloud Support](https://cloud.ibm.com/unifiedsupport/supportcenter)
-- [IBM Cloud Documentation](https://cloud.ibm.com/docs)
-- [IBM Cloud Blog](https://www.ibm.com/cloud/blog)
-- [IBM Cloud Community](https://community.ibm.com/community/user/cloud/home)
 
 ---
 
