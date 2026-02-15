@@ -76,7 +76,6 @@ Write Threshold: 14 of 16 slices must be written successfully
 | **Regional** | Data distributed across 3 data centers in one metro area | Balance of performance and resilience | 99.99% |
 | **Single Data Center** | Data stored in one location with local redundancy | Development, non-critical workloads | 99.9% |
 
-**Workshop Recommendation:** Use Regional for most production workloads to balance cost and resilience.
 
 ### 2.3 Storage Classes Explained
 
@@ -89,7 +88,7 @@ IBM Cloud Object Storage offers multiple storage classes optimized for different
 | **Standard** | Frequent access | Immediate | Active data, frequently accessed files |
 | **Vault** | Infrequent access | Immediate | Monthly backups, compliance archives |
 | **Cold Vault** | Rare access | Immediate | Yearly archives, long-term retention |
-| **Flex** | Unpredictable | Immediate | Mixed workloads, unknown patterns |
+
 
 #### Smart Tier (Automatic Optimization)
 
