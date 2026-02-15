@@ -1,0 +1,30 @@
+# IBM Cloud Configuration
+cloud:
+  provider: ibm
+  region: us-south
+  resource_group: Default
+
+storage:
+  type: cloud-object-storage
+  bucket_name: workshop-demo-bucket
+  storage_class: smart
+  resiliency: regional
+  
+security:
+  encryption: enabled
+  key_management: key-protect
+  access_control: iam
+  
+monitoring:
+  activity_tracking: true
+  metrics: true
+  log_retention_days: 90
+
+lifecycle:
+  archive_after_days: 90
+  expire_after_days: 365
+  
+backup:
+  enabled: true
+  retention_days: 30
+  vault_name: workshop-backup-vault

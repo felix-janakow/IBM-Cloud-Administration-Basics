@@ -1,0 +1,28 @@
+{
+  "workshop": "IBM Cloud Technical Training Advantage",
+  "topic": "Cloud Object Storage",
+  "date": "2026-02-15",
+  "participants": 25,
+  "location": "Virtual",
+  "modules": [
+    {
+      "id": 1,
+      "name": "COS Basics",
+      "duration": "45 minutes"
+    },
+    {
+      "id": 2,
+      "name": "Storage Classes",
+      "duration": "30 minutes"
+    },
+    {
+      "id": 3,
+      "name": "Lifecycle Policies",
+      "duration": "30 minutes"
+    }
+  ],
+  "resources": {
+    "documentation": "https://cloud.ibm.com/docs/cloud-object-storage",
+    "pricing": "https://www.ibm.com/cloud/object-storage/pricing"
+  }
+}

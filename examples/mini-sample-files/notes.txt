@@ -1,0 +1,26 @@
+IBM Cloud Object Storage Workshop Notes
+========================================
+
+Key Takeaways:
+- COS uses erasure coding for data durability
+- Smart Tier automatically optimizes storage costs
+- Archive storage has 90-day minimum retention
+- Backup Vault provides disaster recovery protection
+
+Important Commands:
+- ibmcloud cos bucket-create --bucket my-bucket
+- ibmcloud cos object-put --bucket my-bucket --key file.txt
+- ibmcloud cos object-get --bucket my-bucket --key file.txt
+
+Best Practices:
+1. Use Smart Tier for unknown access patterns
+2. Bundle small files before archiving
+3. Enable versioning for critical data
+4. Implement lifecycle policies for cost optimization
+5. Use private endpoints for internal traffic
+
+Next Steps:
+- Create test bucket
+- Upload sample files
+- Configure lifecycle policy
+- Test backup vault

@@ -1,3 +1,0 @@
-{"id":"ca73846f-06ed-4b27-985a-ded1868811ae","ts":"2026-02-14T22:44:41.187Z","path":"/Users/felixjanakow/Documents/workshops/TTA-Advantage/docs/index.md","version":"1.0.0","taskID":"a48b8d75-eaf3-4eae-ad55-6ab96e030229"}
-{"id":"22735416-80c8-49e1-93cf-b8d54495c146","ts":"2026-02-14T22:44:49.264Z","path":"/Users/felixjanakow/Documents/workshops/TTA-Advantage/docs/_config.yml","version":"1.0.0","taskID":"a48b8d75-eaf3-4eae-ad55-6ab96e030229"}
-{"id":"cef2094a-56cd-4d9c-a076-e5ee780fd5e3","ts":"2026-02-14T22:44:57.924Z","path":"/Users/felixjanakow/Documents/workshops/TTA-Advantage/README.md","version":"1.0.0","taskID":"a48b8d75-eaf3-4eae-ad55-6ab96e030229"}
