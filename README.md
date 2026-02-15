@@ -2,7 +2,7 @@
 
 ## Quick Navigation
 
-- [**IBM Cloud Administration Basics 1**](https://felix-janakow.github.io/IBM-Cloud-Administration-Basics-1/)
+- [**IBM Cloud Administration Basics 1**](https://felix-janakow.github.io/IBM-Cloud-Administration-Basics/)
 - [**Learning Materials per topic**](https://github.com/felix-janakow/IBM-Cloud-Administration-Basics-1/tree/main/basics-learning-materials)
 
 
