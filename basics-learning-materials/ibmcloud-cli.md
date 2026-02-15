@@ -207,10 +207,32 @@ ibmcloud ks workers --cluster my-cluster
 # Create COS instance
 ibmcloud resource service-instance-create my-cos \
   cloud-object-storage standard global
+```
 
+**Configure COS Instance (Important!):**
+
+Before you can use COS commands, you must tell the CLI which COS instance to use by providing its CRN (Cloud Resource Name).
+
+```bash
+# Step 1: List all service instances to find your COS instance name
+ibmcloud resource service-instances
+
+# Step 2: Get the CRN of your COS instance
+# Replace "my-cos" with your actual instance name
+ibmcloud resource service-instance "my-cos" --id
+
+# Step 3: Configure the CLI to use this instance
+# Copy the CRN from step 2 (starts with crn:v1:bluemix...)
+ibmcloud cos config crn --crn <YOUR_COS_INSTANCE_CRN>
+
+# Alternative: Set CRN directly in one command
+ibmcloud cos config crn --crn $(ibmcloud resource service-instance "my-cos" --id | grep crn | awk '{print $2}')
+```
+
+**Now you can use COS commands:**
+```bash
 # Create bucket
 ibmcloud cos bucket-create --bucket my-bucket \
-  --ibm-service-instance-id <instance-id> \
   --region us-south
 
 # Upload file
