@@ -1,4 +1,4 @@
-# IBM Cloud Administration Basics --- Repository Overview 
+# IBM Cloud Administration Basics - Repository Overview 
 
 ## Quick Navigation
 
