@@ -755,26 +755,6 @@ resource "ibm_is_subnet" "subnets" {
 - Tag resources for tracking and organization
 - Implement CI/CD for automation
 
-### Next Steps
-
-**Beginner Level:**
-1. Create your first Schematics workspace
-2. Deploy a simple VPC with subnets
-3. Practice the plan-apply-destroy workflow
-4. Explore IBM Cloud Provider documentation
-
-**Intermediate Level:**
-1. Create reusable Terraform modules
-2. Deploy a Deployable Architecture
-3. Implement multi-environment strategy (dev/staging/prod)
-4. Set up CI/CD pipeline for Terraform
-
-**Advanced Level:**
-1. Create custom Deployable Architecture
-2. Implement advanced state management
-3. Build compliance-ready architectures
-4. Contribute to IBM Cloud Provider
-
 ---
 
 ## 11. Official Documentation and Resources
