@@ -1,0 +1,443 @@
+{
+	"products": [
+		{
+			"label": "Your Custom Deployable Architecture",
+			"name": "deploy-arch-your-custom-name",
+			"product_kind": "solution",
+			"tags": [
+				"ibm_created",
+				"containers",
+				"platform_engineering"
+			],
+			"keywords": [
+				"code engine",
+				"IaC",
+				"infrastructure as code",
+				"terraform",
+				"solution",
+				"fleets",
+				"serverless",
+				"workloads"
+			],
+			"short_description": "TODO: Add your architecture short description here",
+			"long_description": "TODO: Add detailed description of your deployable architecture, including key features, use cases, and benefits. Reference your documentation and source code repositories.",
+			"offering_docs_url": "https://github.com/your-org/your-repo/blob/main/README.md",
+			"offering_icon_url": "https://raw.githubusercontent.com/your-org/your-repo/main/images/icon.svg",
+			"features": [
+				{
+					"title": "Flexible deployment variations",
+					"description": "Supports a growing set of configurations tailored to specific workload types—from compute-intensive tasks to future support for event-driven jobs and transactional applications."
+				},
+				{
+					"title": "End-to-end automation",
+					"description": "Provisions both IBM Code Engine components (applications, builds, secrets, access policies) and supporting IBM Cloud infrastructure for a complete deployment experience."
+				},
+				{
+					"title": "IBM Cloud service integrations",
+					"description": "Seamless integration with [Container Registry](https://www.ibm.com/products/container-registry), [Activity Tracker Event Routing](https://cloud.ibm.com/docs/atracker?topic=atracker-getting-started), [Cloud Logs](https://www.ibm.com/products/cloud-logs), [Cloud Monitoring](https://www.ibm.com/products/cloud-monitoring) and [SCC Workload Protection](https://www.ibm.com/products/security-and-compliance-center)."
+				},
+				{
+					"title": "Simplified setup with guided inputs",
+					"description": "Preconfigured defaults and guided parameter selection (e.g., region, availability zones, service plans) reduce manual setup and accelerate deployment."
+				},
+				{
+					"title": "Composable and Extensible Architecture",
+					"description": "This architecture illustrates how Terraform IBM Modules(TIM) can be integrated to deliver a complete solution on IBM Cloud. Each module is a reusable, and validated component for security, compliance, and operational IBM best practices. You can deploy this architecture as-is or configure it as code by leveraging the underlying modules to fit your specific requirements. Explore the [source code and documentation](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-code-engine) to adapt, extend, or create entirely new solutions using these building blocks."
+				}
+			],
+			"flavors": [
+				{
+					"label": "Quickstart with security and observability",
+					"name": "fully-configurable",
+					"index": 2,
+					"licenses": [],
+					"compliance": {},
+					"iam_permissions": [
+						{
+							"service_name": "Resource group only",
+							"role_crns": [
+								"crn:v1:bluemix:public:iam::::role:Viewer"
+							],
+							"notes": "Viewer access is required in the resource group you want to provision in."
+						},
+						{
+							"service_name": "All Identity and Access enabled services",
+							"role_crns": [
+								"crn:v1:bluemix:public:iam::::role:Administrator"
+							],
+							"notes": "[Optional] Required to create new resource groups with account settings when enabling the Account Configuration integration."
+						},
+						{
+							"service_name": "hs-crypto",
+							"role_crns": [
+								"crn:v1:bluemix:public:iam::::serviceRole:Manager",
+								"crn:v1:bluemix:public:iam::::role:Editor"
+							],
+							"notes": "[Optional] Required if Hyper Protect Crypto Service is used for encryption."
+						},
+						{
+							"service_name": "kms",
+							"role_crns": [
+								"crn:v1:bluemix:public:iam::::serviceRole:Manager",
+								"crn:v1:bluemix:public:iam::::role:Editor"
+							],
+							"notes": "[Optional] Required if Key Protect is used for encryption."
+						},
+						{
+							"service_name": "sysdig-monitor",
+							"role_crns": [
+								"crn:v1:bluemix:public:iam::::serviceRole:Manager",
+								"crn:v1:bluemix:public:iam::::role:Editor"
+							],
+							"notes": "[Optional] Required to create an instance of Cloud Monitoring."
+						},
+						{
+							"service_name": "logs",
+							"role_crns": [
+								"crn:v1:bluemix:public:iam::::serviceRole:Manager",
+								"crn:v1:bluemix:public:iam::::role:Editor"
+							],
+							"notes": "[Optional] Required to create an instance of Cloud Logs."
+						},
+						{
+							"service_name": "atracker",
+							"role_crns": [
+								"crn:v1:bluemix:public:iam::::serviceRole:Writer",
+								"crn:v1:bluemix:public:iam::::role:Editor"
+							],
+							"notes": "[Optional] Required when enabling the Activity Tracker Event Routing."
+						},
+						{
+							"service_name": "sysdig-secure",
+							"role_crns": [
+								"crn:v1:bluemix:public:iam::::serviceRole:Manager",
+								"crn:v1:bluemix:public:iam::::role:Editor"
+							],
+							"notes": "[Optional] Required for creating and managing SCC Workload Protection instance."
+						},
+						{
+							"service_name": "codeengine",
+							"role_crns": [
+								"crn:v1:bluemix:public:iam::::serviceRole:Writer",
+								"crn:v1:bluemix:public:iam::::role:Editor"
+							],
+							"notes": "Required to create and manage Code Engine resources."
+						},
+						{
+							"service_name": "container-registry",
+							"role_crns": [
+								"crn:v1:bluemix:public:iam::::serviceRole:Manager",
+								"crn:v1:bluemix:public:iam::::role:Administrator"
+							],
+							"notes": "Required to create and manage Container Registry namespaces."
+						}
+					],
+					"architecture": {
+						"features": [
+							{
+								"title": " ",
+								"description": "Focuses on provisioning the IBM Cloud infrastructure around Code Engine—such as IAM, observability, storage, encryption, and security—while giving users the flexibility to integrate only what they need."
+							},
+							{
+								"title": " ",
+								"description": "Code Engine components (app, build, or function) are configured later by users via UI, CLI, or Terraform, offering full flexibility."
+							}
+						],
+						"diagrams": [
+							{
+								"diagram": {
+									"url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-landing-zone-code-engine/refs/heads/main/reference-architectures/deployment-architecture-fully-configurable.svg",
+									"caption": "IBM Cloud Code Engine topology - Standard (Integrated setup with configurable services)",
+									"type": "image/svg+xml"
+								},
+								"description": "The architecture consists of a central [IBM Cloud Code Engine project](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started), which serves as the primary execution environment for the application. Surrounding this core component is the foundational IBM Cloud configuration, which includes the IBM Cloud account, resource group, account settings, and optionally a trusted profile for secure IAM access.\u003cbr\u003e\u003cbr\u003eOptionally, the architecture can provision a [Container Registry](https://www.ibm.com/products/container-registry) to securely store and manage container images used by the application.\u003cbr\u003e\u003cbr\u003eSurrounding the Code Engine project are optional service integrations that can be added based on specific use cases. These include observability tools such as [Cloud Monitoring](https://www.ibm.com/products/cloud-monitoring), [Cloud Logs](https://www.ibm.com/products/cloud-logs) and [Activity Tracker Event Routing](https://cloud.ibm.com/docs/atracker?topic=atracker-getting-started). These services provide insights into application performance, system activity, and logging.\n\nFor enhanced security and compliance, you can also integrate [SCC Workload Protection](https://www.ibm.com/products/security-and-compliance-center), together with [App Configuration](https://cloud.ibm.com/docs/app-configuration), which come in a pair to help enforce workload-level security policies and centrally manage application settings."
+							}
+						]
+					},
+					"dependencies": [
+						{
+							"name": "deploy-arch-ibm-cloud-logs",
+							"id": "63d8ae58-fbf3-41ce-b844-0fb5b85882ab-global",
+							"version": "v1.11.3",
+							"flavors": [
+								"fully-configurable"
+							],
+							"catalog_id": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3",
+							"optional": true,
+							"on_by_default": true,
+							"default_flavor": "",
+							"input_mapping": [
+								{
+									"dependency_input": "prefix",
+									"version_input": "prefix",
+									"reference_version": true
+								},
+								{
+									"dependency_input": "region",
+									"version_input": "region",
+									"reference_version": true
+								},
+								{
+									"dependency_input": "existing_resource_group_name",
+									"version_input": "existing_resource_group_name",
+									"reference_version": true
+								}
+							],
+							"description": "Configure an IBM Cloud Logs instance to analyse the platform logs."
+						},
+						{
+							"name": "deploy-arch-ibm-cloud-monitoring",
+							"id": "73debdbf-894f-4c14-81c7-5ece3a70b67d-global",
+							"version": "v1.13.3",
+							"flavors": [
+								"fully-configurable"
+							],
+							"catalog_id": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3",
+							"optional": true,
+							"on_by_default": true,
+							"default_flavor": "",
+							"input_mapping": [
+								{
+									"dependency_input": "enable_platform_metrics",
+									"value": false
+								},
+								{
+									"dependency_input": "prefix",
+									"version_input": "prefix",
+									"reference_version": true
+								},
+								{
+									"dependency_input": "existing_resource_group_name",
+									"version_input": "existing_resource_group_name",
+									"reference_version": true
+								},
+								{
+									"dependency_input": "region",
+									"version_input": "region",
+									"reference_version": true
+								}
+							],
+							"description": "Configure an IBM Cloud Monitoring instance to collect the platform metrics."
+						},
+						{
+							"name": "deploy-arch-ibm-activity-tracker",
+							"id": "918453c3-4f97-4583-8c4a-83ef12fc7916-global",
+							"version": "v1.6.13",
+							"flavors": [
+								"fully-configurable"
+							],
+							"catalog_id": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3",
+							"optional": true,
+							"on_by_default": true,
+							"default_flavor": "",
+							"input_mapping": [
+								{
+									"dependency_input": "prefix",
+									"version_input": "prefix",
+									"reference_version": true
+								},
+								{
+									"dependency_input": "region",
+									"version_input": "region",
+									"reference_version": true
+								},
+								{
+									"dependency_input": "existing_resource_group_name",
+									"version_input": "existing_resource_group_name",
+									"reference_version": true
+								}
+							],
+							"description": "Configure Activity Tracker Event Routing to route the auditing events."
+						},
+						{
+							"name": "deploy-arch-ibm-scc-workload-protection",
+							"id": "4322cf44-2289-49aa-a719-dd79e39b14dc-global",
+							"version": "v1.17.4",
+							"flavors": [
+								"fully-configurable"
+							],
+							"catalog_id": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3",
+							"optional": true,
+							"on_by_default": true,
+							"default_flavor": "",
+							"input_mapping": [
+								{
+									"dependency_input": "prefix",
+									"version_input": "prefix",
+									"reference_version": true
+								},
+								{
+									"dependency_input": "region",
+									"version_input": "region",
+									"reference_version": true
+								},
+								{
+									"dependency_input": "existing_resource_group_name",
+									"version_input": "existing_resource_group_name",
+									"reference_version": true
+								}
+							],
+							"description": "Configure an IBM Cloud Security and Compliance Center Workload Protection instance to help you manage security and compliance for your organization."
+						},
+						{
+							"name": "deploy-arch-ibm-container-registry",
+							"id": "5947efd7-d52a-4905-8052-45f1142f78a0-global",
+							"version": "v2.6.13",
+							"flavors": [
+								"fully-configurable"
+							],
+							"catalog_id": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3",
+							"optional": true,
+							"on_by_default": true,
+							"default_flavor": "",
+							"input_mapping": [
+								{
+									"dependency_input": "prefix",
+									"version_input": "prefix",
+									"reference_version": true
+								},
+								{
+									"dependency_input": "existing_resource_group_name",
+									"version_input": "existing_resource_group_name",
+									"reference_version": true
+								},
+								{
+									"dependency_input": "namespace_region",
+									"value": "global"
+								}
+							],
+							"description": "Configure the IBM Container Registry by creating a namespace and setting a container registry retention policy."
+						}
+					],
+					"dependency_version_2": true,
+					"release_notes_url": "https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-code-engine/releases",
+					"configuration": [
+						{
+							"key": "ibmcloud_api_key",
+							"type": "password",
+							"description": "The IBM Cloud API key.",
+							"required": true,
+							"virtual": false
+						},
+						{
+							"key": "prefix",
+							"type": "string",
+							"default_value": "dev",
+							"value_constraints": [
+								{
+									"type": "regex",
+									"description": "Prefix must begin with a lowercase letter and may contain only lowercase letters, digits, and hyphens '-'. It must not end with a hyphen ('-'), and cannot contain consecutive hyphens ('--'). It should not exceed 16 characters.",
+									"value": "^$|^__NULL__$|^[a-z](?!.*--)(?:[a-z0-9-]{0,14}[a-z0-9])?$"
+								}
+							],
+							"description": "The prefix to add to all resources that this solution creates (e.g `prod`, `test`, `dev`). To skip using a prefix, set this value to `null` or an empty string. [Learn more](https://terraform-ibm-modules.github.io/documentation/#/prefix.md).",
+							"required": true,
+							"virtual": false,
+							"random_string": {
+								"length": 4
+							}
+						},
+						{
+							"key": "existing_resource_group_name",
+							"type": "string",
+							"default_value": "Default",
+							"description": "The name of an existing resource group to provision the resources. [Learn more](https://cloud.ibm.com/docs/account?topic=account-rgs\u0026interface=ui#create_rgs) about how to create a resource group.",
+							"display_name": "resource_group",
+							"required": false,
+							"custom_config": {
+								"type": "resource_group",
+								"grouping": "deployment",
+								"original_grouping": "deployment",
+								"config_constraints": {
+									"identifier": "rg_name"
+								}
+							},
+							"virtual": false
+						},
+						{
+							"key": "code_engine_project_name",
+							"type": "string",
+							"default_value": "project",
+							"description": "The name of the IBM Cloud Code Engine project to be deployed. If specified, the prefix leads the project name in the \u003cprefix\u003e-\u003ccode_engine_project_name\u003e format.",
+							"required": true,
+							"virtual": false
+						},
+						{
+							"key": "region",
+							"type": "string",
+							"default_value": "us-south",
+							"description": "The region to provision all resources.",
+							"required": true,
+							"custom_config": {
+								"type": "region",
+								"grouping": "deployment",
+								"original_grouping": "deployment",
+								"config_constraints": {
+									"filterString": "service:codeengine",
+									"showKinds": [
+										"region"
+									]
+								}
+							},
+							"virtual": false
+						},
+						{
+							"key": "provider_visibility",
+							"type": "string",
+							"default_value": "private",
+							"description": "Set the visibility value for the IBM terraform provider. Supported values are `public`, `private`, `public-and-private`. [Learn more](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/guides/custom-service-endpoints).",
+							"required": false,
+							"options": [
+								{
+									"displayname": "private",
+									"value": "private"
+								},
+								{
+									"displayname": "public",
+									"value": "public"
+								},
+								{
+									"displayname": "public-and-private",
+									"value": "public-and-private"
+								}
+							],
+							"hidden": true,
+							"virtual": false
+						}
+					],
+					"terraform_version": "1.12.2",
+					"outputs": [
+						{
+							"key": "next_step_primary_url",
+							"description": "primary url"
+						},
+						{
+							"key": "resource_group_name",
+							"description": "Resource group name."
+						},
+						{
+							"key": "code_engine_project_name",
+							"description": "Code engine project name."
+						},
+						{
+							"key": "code_engine_project_id",
+							"description": "Created code engine project identifier."
+						},
+						{
+							"key": "next_steps_text",
+							"description": "Next steps text"
+						},
+						{
+							"key": "next_step_primary_label",
+							"description": "Primary label"
+						}
+					],
+					"install_type": "fullstack",
+					"scripts": [],
+					"change_notices": {},
+					"short_description": "Ideal for users who want to quickly provision a fully configurable IBM Cloud Code Engine project with built-in security and observability."
+				}
+			]
+		}
+	]
+}

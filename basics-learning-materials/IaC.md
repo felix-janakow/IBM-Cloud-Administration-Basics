@@ -72,16 +72,16 @@ IBM Cloud Schematics is a fully managed service that provides Terraform-as-a-Ser
 **Schematics Architecture:**
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                        User Interface                           │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────────┐   │
-│  │  IBM Cloud   │  │  CLI/API     │  │  Terraform CLI       │   │
-│  │  Console     │  │              │  │  (with Schematics)   │   │
-│  └──────┬───────┘  └──────┬───────┘  └──────────┬───────────┘   │
-└─────────┼──────────────────┼──────────────────────┼─────────────┘
-          │                  │                      │
-          └──────────────────┼──────────────────────┘
-                             ▼
+┌────────────────────────────────────────────────────────────────┐
+│                        User Interface                          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────────┐  │
+│  │  IBM Cloud   │  │  CLI/API     │  │  Terraform CLI       │  │
+│  │  Console     │  │              │  │  (with Schematics)   │  │
+│  └──────┬───────┘  └──────┬───────┘  └─────────┬────────────┘  │
+└─────────┼─────────────────┼────────────────────┼───────────────┘
+          │                 │                    │
+          └─────────────────┼────────────────────┘
+                            ▼
           ┌─────────────────────────────────────────────────────┐
           │         IBM Cloud Schematics Service                │
           ├─────────────────────────────────────────────────────┤
@@ -506,6 +506,8 @@ Review:
 
 ## 7. Creating Custom Deployable Architectures
 
+[Offical Docs Link to build your own deployable architecture](https://cloud.ibm.com/docs/secure-enterprise?group=creating-deployable-architectures)
+
 ### 7.1 Architecture Requirements
 
 **Required Components:**
@@ -628,6 +630,8 @@ my-custom-vpc-architecture/
 ```
 
 #### Step 2: Onboard to Private Catalog
+
+[Offical Docs for onboarding to Private Catalog](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-onboard-da)
 
 **Navigation:** IBM Cloud Console → Manage → Catalogs → Private catalogs
 
