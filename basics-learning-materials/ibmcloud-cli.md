@@ -545,7 +545,4 @@ ibmcloud plugin --help
 - [CLI Plugin Repository](https://cloud.ibm.com/docs/cli?topic=cli-plug-ins)
 - [CLI GitHub Repository](https://github.com/IBM-Cloud/ibm-cloud-cli-release)
 
-**Community:**
-- [IBM Cloud Community](https://community.ibm.com/community/user/cloud/home)
-- [Stack Overflow - IBM Cloud](https://stackoverflow.com/questions/tagged/ibm-cloud)
 
