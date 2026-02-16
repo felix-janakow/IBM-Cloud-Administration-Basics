@@ -25,5 +25,11 @@ TTA-Advantage/
 │
 ├── basics-learning-materials/      # Basics Learning - Materials
 │   └── COS.md                      # COS learnings
-    └── ...                         
+│   └── ...
+│
+├── examples/                       # Example implementations
+│   ├── IaC/                        # Infrastructure as Code examples - Terraform
+│   ├── IaC-Ansible/                # Ansible automation examples
+│   ├── deployable-architecture/    # Deployable architecture example templates
+│   └── mini-sample-files/          # Sample files for testing
 ```
