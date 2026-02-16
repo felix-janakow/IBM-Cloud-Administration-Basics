@@ -1,9 +1,6 @@
-############
-# Outputs - Customize based on your architecture
-# Uncomment and modify the outputs you need
-############
-
-# TODO: Update module reference from "module.your-custom-module" to match your main.tf module name
+##############################################################################
+# Outputs
+##############################################################################
 
 output "resource_group_name" {
   value       = var.existing_resource_group_name
@@ -11,23 +8,26 @@ output "resource_group_name" {
 }
 
 output "code_engine_project_name" {
-  value       = var.code_engine_project_name
+  value       = ibm_code_engine_project.code_engine_project.name
   description = "Code engine project name."
 }
 
-# Example: Uncomment to expose module outputs
-# output "code_engine_project_id" {
-#   value       = module.your-custom-module.project_id
-#   description = "Created code engine project identifier."
-# }
+output "code_engine_project_id" {
+  value       = ibm_code_engine_project.code_engine_project.id
+  description = "Created code engine project identifier."
+}
 
-# output "next_step_primary_url" {
-#   value       = "https://cloud.ibm.com/codeengine/projects"
-#   description = "URL to access Code Engine projects"
-# }
+output "next_step_primary_url" {
+  value       = "https://cloud.ibm.com/codeengine/projects"
+  description = "URL to access Code Engine projects"
+}
 
-# TODO: Add additional outputs specific to your architecture
-# output "custom_output_name" {
-#   value       = module.your-custom-module.output_name
-#   description = "Description of your custom output"
-# }
+output "next_steps_text" {
+  value       = "Your Code Engine project has been created. Visit the Code Engine console to start deploying applications, jobs, or functions."
+  description = "Next steps text"
+}
+
+output "next_step_primary_label" {
+  value       = "View Code Engine Projects"
+  description = "Primary label"
+}
