@@ -16,10 +16,6 @@ variable "prefix" {
   type        = string
   description = "The prefix to add to all resources that this solution creates (e.g `prod`, `test`, `dev`). To skip using a prefix, set this value to `null` or an empty string. [Learn more](https://terraform-ibm-modules.github.io/documentation/#/prefix.md)."
   default     = "dev"
-  validation {
-    condition     = var.prefix == null || var.prefix == "" || can(regex("^[a-z](?!.*--)(?:[a-z0-9-]{0,14}[a-z0-9])?$", var.prefix))
-    error_message = "Prefix must begin with a lowercase letter and may contain only lowercase letters, digits, and hyphens '-'. It must not end with a hyphen ('-'), and cannot contain consecutive hyphens ('--'). It should not exceed 16 characters."
-  }
 }
 
 variable "existing_resource_group_name" {
@@ -38,10 +34,6 @@ variable "provider_visibility" {
   type        = string
   description = "Set the visibility value for the IBM terraform provider. Supported values are `public`, `private`, `public-and-private`. [Learn more](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/guides/custom-service-endpoints)."
   default     = "private"
-  validation {
-    condition     = contains(["public", "private", "public-and-private"], var.provider_visibility)
-    error_message = "Valid values are 'public', 'private', or 'public-and-private'."
-  }
 }
 
 ##############################################################################
