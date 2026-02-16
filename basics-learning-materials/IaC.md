@@ -29,26 +29,26 @@ Infrastructure as Code (IaC) is the practice of managing and provisioning infras
 │                    IBM Cloud IaC Ecosystem                      │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  ┌──────────────────┐      ┌──────────────────────────────┐   │
-│  │   Terraform      │◄─────┤  IBM Cloud Provider for      │   │
-│  │   (Open Source)  │      │  Terraform                   │   │
-│  └──────────────────┘      └──────────────────────────────┘   │
+│  ┌──────────────────┐      ┌──────────────────────────────┐     │
+│  │   Terraform      │◄─────┤  IBM Cloud Provider for      │     │
+│  │   (Open Source)  │      │  Terraform                   │     │
+│  └──────────────────┘      └──────────────────────────────┘     │
 │           ▲                                                     │
 │           │                                                     │
-│  ┌────────┴─────────────────────────────────────────────────┐ │
-│  │         IBM Cloud Schematics (Managed Service)           │ │
-│  │  - Terraform execution environment                       │ │
-│  │  - State management                                      │ │
-│  │  - Workspace management                                  │ │
-│  └──────────────────────────────────────────────────────────┘ │
+│  ┌────────┴─────────────────────────────────────────────────┐   │
+│  │         IBM Cloud Schematics (Managed Service)           │   │
+│  │  - Terraform execution environment                       │   │
+│  │  - State management                                      │   │
+│  │  - Workspace management                                  │   │
+│  └──────────────────────────────────────────────────────────┘   │
 │           ▲                                                     │
 │           │                                                     │
-│  ┌────────┴─────────────────────────────────────────────────┐ │
-│  │         Deployable Architectures                         │ │
-│  │  - Pre-validated infrastructure patterns                 │ │
-│  │  - Compliance-ready templates                            │ │
-│  │  - Enterprise governance                                 │ │
-│  └──────────────────────────────────────────────────────────┘ │
+│  ┌────────┴─────────────────────────────────────────────────┐   │
+│  │         Deployable Architectures                         │   │
+│  │  - Pre-validated infrastructure patterns                 │   │
+│  │  - Compliance-ready templates                            │   │
+│  │  - Enterprise governance                                 │   │
+│  └──────────────────────────────────────────────────────────┘   │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -74,10 +74,10 @@ IBM Cloud Schematics is a fully managed service that provides Terraform-as-a-Ser
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                        User Interface                           │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────────┐ │
-│  │  IBM Cloud   │  │  CLI/API     │  │  Terraform CLI       │ │
-│  │  Console     │  │              │  │  (with Schematics)   │ │
-│  └──────┬───────┘  └──────┬───────┘  └──────────┬───────────┘ │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────────┐   │
+│  │  IBM Cloud   │  │  CLI/API     │  │  Terraform CLI       │   │
+│  │  Console     │  │              │  │  (with Schematics)   │   │
+│  └──────┬───────┘  └──────┬───────┘  └──────────┬───────────┘   │
 └─────────┼──────────────────┼──────────────────────┼─────────────┘
           │                  │                      │
           └──────────────────┼──────────────────────┘
@@ -86,33 +86,33 @@ IBM Cloud Schematics is a fully managed service that provides Terraform-as-a-Ser
           │         IBM Cloud Schematics Service                │
           ├─────────────────────────────────────────────────────┤
           │                                                     │
-          │  ┌──────────────────────────────────────────────┐ │
-          │  │           Workspace Management               │ │
-          │  │  - Configuration storage                     │ │
-          │  │  - Variable management                       │ │
-          │  │  - Version control integration               │ │
-          │  └──────────────────────────────────────────────┘ │
+          │  ┌──────────────────────────────────────────────┐   │
+          │  │           Workspace Management               │   │
+          │  │  - Configuration storage                     │   │
+          │  │  - Variable management                       │   │
+          │  │  - Version control integration               │   │
+          │  └──────────────────────────────────────────────┘   │
           │                                                     │
-          │  ┌──────────────────────────────────────────────┐ │
-          │  │           Terraform Engine                   │ │
-          │  │  - Plan execution                            │ │
-          │  │  - Apply operations                          │ │
-          │  │  - Destroy operations                        │ │
-          │  └──────────────────────────────────────────────┘ │
+          │  ┌──────────────────────────────────────────────┐   │
+          │  │           Terraform Engine                   │   │
+          │  │  - Plan execution                            │   │
+          │  │  - Apply operations                          │   │
+          │  │  - Destroy operations                        │   │
+          │  └──────────────────────────────────────────────┘   │
           │                                                     │
-          │  ┌──────────────────────────────────────────────┐ │
-          │  │           State Management                   │ │
-          │  │  - Encrypted state storage                   │ │
-          │  │  - State locking                             │ │
-          │  │  - State versioning                          │ │
-          │  └──────────────────────────────────────────────┘ │
+          │  ┌──────────────────────────────────────────────┐   │
+          │  │           State Management                   │   │
+          │  │  - Encrypted state storage                   │   │
+          │  │  - State locking                             │   │
+          │  │  - State versioning                          │   │
+          │  └──────────────────────────────────────────────┘   │
           │                                                     │
-          │  ┌──────────────────────────────────────────────┐ │
-          │  │           IAM Integration                    │ │
-          │  │  - Access control                            │ │
-          │  │  - Service authorization                     │ │
-          │  │  - Audit logging                             │ │
-          │  └──────────────────────────────────────────────┘ │
+          │  ┌──────────────────────────────────────────────┐   │
+          │  │           IAM Integration                    │   │
+          │  │  - Access control                            │   │
+          │  │  - Service authorization                     │   │
+          │  │  - Audit logging                             │   │
+          │  └──────────────────────────────────────────────┘   │
           │                                                     │
           └─────────────────────────────────────────────────────┘
                              ▼
@@ -196,33 +196,33 @@ Schematics automatically manages Terraform state with enterprise features:
 │  User Action                                                    │
 │       │                                                         │
 │       ▼                                                         │
-│  ┌─────────────────┐                                           │
-│  │  Terraform      │                                           │
-│  │  Operation      │                                           │
-│  └────────┬────────┘                                           │
+│  ┌─────────────────┐                                            │
+│  │  Terraform      │                                            │
+│  │  Operation      │                                            │
+│  └────────┬────────┘                                            │
 │           │                                                     │
 │           ▼                                                     │
-│  ┌─────────────────────────────────────────────────────────┐  │
-│  │         State Lock Acquisition                          │  │
-│  │  - Prevents concurrent modifications                    │  │
-│  │  - Ensures consistency                                  │  │
-│  └─────────────────┬───────────────────────────────────────┘  │
-│                    │                                           │
-│                    ▼                                           │
-│  ┌─────────────────────────────────────────────────────────┐  │
-│  │         Encrypted State Storage                         │  │
-│  │  - AES-256 encryption at rest                           │  │
-│  │  - TLS 1.2+ in transit                                  │  │
-│  │  - IBM Key Protect integration                          │  │
-│  └─────────────────┬───────────────────────────────────────┘  │
-│                    │                                           │
-│                    ▼                                           │
-│  ┌─────────────────────────────────────────────────────────┐  │
-│  │         State Versioning                                │  │
-│  │  - Automatic versioning                                 │  │
-│  │  - Rollback capability                                  │  │
-│  │  - Audit trail                                          │  │
-│  └─────────────────────────────────────────────────────────┘  │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │         State Lock Acquisition                          │    │
+│  │  - Prevents concurrent modifications                    │    │
+│  │  - Ensures consistency                                  │    │
+│  └─────────────────┬───────────────────────────────────────┘    │
+│                    │                                            │
+│                    ▼                                            │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │         Encrypted State Storage                         │    │
+│  │  - AES-256 encryption at rest                           │    │
+│  │  - TLS 1.2+ in transit                                  │    │
+│  │  - IBM Key Protect integration                          │    │
+│  └─────────────────┬───────────────────────────────────────┘    │
+│                    │                                            │
+│                    ▼                                            │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │         State Versioning                                │    │
+│  │  - Automatic versioning                                 │    │
+│  │  - Rollback capability                                  │    │
+│  │  - Audit trail                                          │    │
+│  └─────────────────────────────────────────────────────────┘    │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -950,22 +950,22 @@ module "production_vpc" {
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  Terraform Module                  Deployable Architecture      │
-│  ┌──────────────────┐             ┌──────────────────────────┐ │
-│  │ - Terraform code │             │ - Terraform modules      │ │
-│  │ - Variables      │             │ - Compliance policies    │ │
-│  │ - Outputs        │             │ - Security controls      │ │
-│  │                  │             │ - Cost estimates         │ │
-│  │                  │             │ - Architecture diagrams  │ │
-│  │                  │             │ - Deployment validation  │ │
-│  │                  │             │ - Version management     │ │
-│  │                  │             │ - IBM support            │ │
-│  └──────────────────┘             └──────────────────────────┘ │
+│  ┌──────────────────┐             ┌──────────────────────────┐  │
+│  │ - Terraform code │             │ - Terraform modules      │  │  
+│  │ - Variables      │             │ - Compliance policies    │  │
+│  │ - Outputs        │             │ - Security controls      │  │
+│  │                  │             │ - Cost estimates         │  │
+│  │                  │             │ - Architecture diagrams  │  │
+│  │                  │             │ - Deployment validation  │  │
+│  │                  │             │ - Version management     │  │
+│  │                  │             │ - IBM support            │  │
+│  └──────────────────┘             └──────────────────────────┘  │
 │                                                                 │
-│  Use Case:                         Use Case:                   │
-│  - Custom infrastructure           - Enterprise deployments    │
-│  - Flexible requirements           - Compliance requirements   │
-│  - Learning/experimentation        - Production workloads      │
-│                                    - Multi-account governance  │
+│  Use Case:                         Use Case:                    │
+│  - Custom infrastructure           - Enterprise deployments     │
+│  - Flexible requirements           - Compliance requirements    │
+│  - Learning/experimentation        - Production workloads       │
+│                                    - Multi-account governance   │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -979,36 +979,36 @@ module "production_vpc" {
 │            Deployable Architecture Structure                    │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │  Layer 1: Base Infrastructure                            │  │
-│  │  - VPC, Subnets, Security Groups                         │  │
-│  │  - Network ACLs, Public Gateways                         │  │
-│  │  - Transit Gateway (multi-VPC)                           │  │
-│  └──────────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  Layer 1: Base Infrastructure                            │   │
+│  │  - VPC, Subnets, Security Groups                         │   │
+│  │  - Network ACLs, Public Gateways                         │   │
+│  │  - Transit Gateway (multi-VPC)                           │   │
+│  └──────────────────────────────────────────────────────────┘   │
 │                          ▲                                      │
 │                          │                                      │
-│  ┌──────────────────────┴───────────────────────────────────┐  │
-│  │  Layer 2: Platform Services                              │  │
-│  │  - Kubernetes/OpenShift clusters                         │  │
-│  │  - Databases (PostgreSQL, MongoDB, etc.)                 │  │
-│  │  - Message queues, Event Streams                         │  │
-│  └──────────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────┴───────────────────────────────────┐   │
+│  │  Layer 2: Platform Services                              │   │
+│  │  - Kubernetes/OpenShift clusters                         │   │
+│  │  - Databases (PostgreSQL, MongoDB, etc.)                 │   │
+│  │  - Message queues, Event Streams                         │   │
+│  └──────────────────────────────────────────────────────────┘   │
 │                          ▲                                      │
 │                          │                                      │
-│  ┌──────────────────────┴───────────────────────────────────┐  │
-│  │  Layer 3: Security & Observability                       │  │
-│  │  - Key Protect, Secrets Manager                          │  │
-│  │  - Activity Tracker, Log Analysis                        │  │
-│  │  - Security and Compliance Center                        │  │
-│  └──────────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────┴───────────────────────────────────┐   │
+│  │  Layer 3: Security & Observability                       │   │
+│  │  - Key Protect, Secrets Manager                          │   │
+│  │  - Activity Tracker, Log Analysis                        │   │
+│  │  - Security and Compliance Center                        │   │
+│  └──────────────────────────────────────────────────────────┘   │
 │                          ▲                                      │
 │                          │                                      │
-│  ┌──────────────────────┴───────────────────────────────────┐  │
-│  │  Layer 4: Application Layer                              │  │
-│  │  - Application workloads                                 │  │
-│  │  - CI/CD pipelines                                       │  │
-│  │  - Custom configurations                                 │  │
-│  └──────────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────┴───────────────────────────────────┐   │
+│  │  Layer 4: Application Layer                              │   │
+│  │  - Application workloads                                 │   │
+│  │  - CI/CD pipelines                                       │   │
+│  │  - Custom configurations                                 │   │
+│  └──────────────────────────────────────────────────────────┘   │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -1053,7 +1053,7 @@ Compliance-focused patterns:
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  Base Architecture: VPC Landing Zone                            │
-│  └─────────────────────────────────────────────────────────┐   │
+│  └─────────────────────────────────────────────────────────┐    │
 │                                                             │   │
 │      Variation 1: Standard                                  │   │
 │      ├─ 3 zones                                             │   │
@@ -1385,26 +1385,26 @@ Review the architecture page:
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  Region: us-south                                               │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │  Management VPC                                          │  │
-│  │  ┌────────────┐  ┌────────────┐  ┌────────────┐        │  │
-│  │  │  Zone 1    │  │  Zone 2    │  │  Zone 3    │        │  │
-│  │  │  Subnet    │  │  Subnet    │  │  Subnet    │        │  │
-│  │  └────────────┘  └────────────┘  └────────────┘        │  │
-│  │  - Bastion host                                         │  │
-│  │  - VPN gateway                                          │  │
-│  │  - Activity Tracker                                     │  │
-│  └──────────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  Management VPC                                          │   │ 
+│  │  ┌────────────┐  ┌────────────┐  ┌────────────┐          │   │
+│  │  │  Zone 1    │  │  Zone 2    │  │  Zone 3    │          │   │
+│  │  │  Subnet    │  │  Subnet    │  │  Subnet    │          │   │
+│  │  └────────────┘  └────────────┘  └────────────┘          │   │
+│  │  - Bastion host                                          │   │
+│  │  - VPN gateway                                           │   │
+│  │  - Activity Tracker                                      │   │
+│  └──────────────────────────────────────────────────────────┘   │
 │                                                                 │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │  Workload VPC                                            │  │
-│  │  ┌────────────┐  ┌────────────┐  ┌────────────┐        │  │
-│  │  │  Zone 1    │  │  Zone 2    │  │  Zone 3    │        │  │
-│  │  │  Subnet    │  │  Subnet    │  │  Subnet    │        │  │
-│  │  └────────────┘  └────────────┘  └────────────┘        │  │
-│  │  - Application workloads                                │  │
-│  │  - Load balancers                                       │  │
-│  └──────────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  Workload VPC                                            │   │
+│  │  ┌────────────┐  ┌────────────┐  ┌────────────┐          │   │
+│  │  │  Zone 1    │  │  Zone 2    │  │  Zone 3    │          │   │
+│  │  │  Subnet    │  │  Subnet    │  │  Subnet    │          │   │
+│  │  └────────────┘  └────────────┘  └────────────┘          │   │
+│  │  - Application workloads                                 │   │
+│  │  - Load balancers                                        │   │
+│  └──────────────────────────────────────────────────────────┘   │
 │                                                                 │
 │  Security Services:                                             │
 │  - Key Protect (encryption keys)                                │
@@ -2566,26 +2566,26 @@ Deploy a production-ready web application with load balancer, application server
 │                         VPC (10.240.0.0/16)                     │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │  Public Subnet (10.240.1.0/24)                           │  │
-│  │  ┌────────────────┐                                      │  │
-│  │  │ Load Balancer  │                                      │  │
-│  │  └────────────────┘                                      │  │
-│  └──────────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  Public Subnet (10.240.1.0/24)                           │   │
+│  │  ┌────────────────┐                                      │   │
+│  │  │ Load Balancer  │                                      │   │
+│  │  └────────────────┘                                      │   │
+│  └──────────────────────────────────────────────────────────┘   │
 │                          ↓                                      │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │  Private Subnet (10.240.2.0/24)                          │  │
-│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐               │  │
-│  │  │  App VM  │  │  App VM  │  │  App VM  │               │  │
-│  │  └──────────┘  └──────────┘  └──────────┘               │  │
-│  └──────────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  Private Subnet (10.240.2.0/24)                          │   │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐                │   │
+│  │  │  App VM  │  │  App VM  │  │  App VM  │                │   │
+│  │  └──────────┘  └──────────┘  └──────────┘                │   │
+│  └──────────────────────────────────────────────────────────┘   │
 │                          ↓                                      │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │  Database Subnet (10.240.3.0/24)                         │  │
-│  │  ┌────────────────────────────────┐                      │  │
-│  │  │  PostgreSQL Database (HA)      │                      │  │
-│  │  └────────────────────────────────┘                      │  │
-│  └──────────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  Database Subnet (10.240.3.0/24)                         │   │
+│  │  ┌────────────────────────────────┐                      │   │
+│  │  │  PostgreSQL Database (HA)      │                      │   │ 
+│  │  └────────────────────────────────┘                      │   │
+│  └──────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -2760,11 +2760,3 @@ module "compliant_infrastructure" {
 ```
 
 ---
-
-**Document Version:** 1.0  
-**Last Updated:** 2026-02-15  
-**Maintained By:** IBM Cloud Technical Advocacy Team
-
----
-
-*This document is part of the IBM Cloud Technical Training Advantage workshop series. For questions or feedback, please contact your workshop facilitator or visit the IBM Cloud Community.*

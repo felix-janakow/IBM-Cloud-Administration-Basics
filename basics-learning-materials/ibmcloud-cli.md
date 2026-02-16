@@ -202,52 +202,133 @@ ibmcloud ks workers --cluster my-cluster
 
 ### Example 3: Managing Cloud Object Storage
 
-**Create and Use COS:**
+**Complete COS Workflow:**
+
+#### Step 1: Create COS Instance (if needed)
 ```bash
 # Create COS instance
 ibmcloud resource service-instance-create my-cos \
   cloud-object-storage standard global
 ```
 
-**Configure COS Instance (Important!):**
-
-Before you can use COS commands, you must tell the CLI which COS instance to use by providing its CRN (Cloud Resource Name).
+#### Step 2: Find Your COS Instance
 
 ```bash
-# Step 1: List all service instances to find your COS instance name
-ibmcloud resource service-instances
-
-# Step 2: Get the CRN of your COS instance
-# Replace "my-cos" with your actual instance name
-ibmcloud resource service-instance "my-cos" --id
-
-# Step 3: Configure the CLI to use this instance
-# Copy the CRN from step 2 (starts with crn:v1:bluemix...)
-ibmcloud cos config crn --crn <YOUR_COS_INSTANCE_CRN>
-
-# Alternative: Set CRN directly in one command
-ibmcloud cos config crn --crn $(ibmcloud resource service-instance "my-cos" --id | grep crn | awk '{print $2}')
+# List all COS instances in your account
+ibmcloud resource service-instances --service-name cloud-object-storage
 ```
 
-**Now you can use COS commands:**
+**Expected output:**
+```
+Name              Location   State    Type
+my-cos-instance   global     active   service_instance
+```
+
+#### Step 3: Get the CRN (Cloud Resource Name)
+
 ```bash
-# Create bucket
-ibmcloud cos bucket-create --bucket my-bucket \
+# Get the CRN of your COS instance
+# Replace "my-cos-instance" with your actual instance name
+ibmcloud resource service-instance "my-cos-instance" --id
+```
+
+**Expected output:**
+```
+crn:v1:bluemix:public:cloud-object-storage:global:a/xxxxx:yyyy-yyyy-yyyy::
+```
+
+#### Step 4: Configure CLI with CRN (Critical Step!)
+
+Before you can use any COS commands, you must configure the CLI with your instance CRN:
+
+```bash
+# Configure the CLI to use this instance
+# The CLI will prompt you to select the CRN format - choose option 1
+ibmcloud cos config crn --crn "crn:v1:bluemix:public:cloud-object-storage:global:a/xxxxx:yyyy-yyyy-yyyy::"
+```
+
+**Note:** When prompted, select option 1 (the shorter CRN format).
+
+**Verify configuration:**
+```bash
+# Check that CRN is configured
+ibmcloud cos config list
+```
+
+#### Step 5: List Your Buckets
+
+```bash
+# List all buckets in your COS instance
+ibmcloud cos buckets
+```
+
+**Expected output:**
+```
+OK
+2 buckets found in your account:
+
+Name            Date Created (UTC)
+my-bucket-1     Feb 15, 2026 at 23:12:43
+my-bucket-2     Feb 15, 2026 at 23:31:47
+```
+
+#### Step 6: List Objects in a Bucket
+
+```bash
+# List all objects in a specific bucket
+ibmcloud cos objects --bucket my-bucket-1
+```
+
+**Expected output:**
+```
+OK
+Found 3 objects in bucket 'my-bucket-1':
+
+Name               Last Modified (UTC)        Object Size
+app.py             Feb 15, 2026 at 23:29:55   1.21 KiB
+config.yaml        Feb 15, 2026 at 23:29:56   530 B
+data.csv           Feb 15, 2026 at 23:29:57   559 B
+```
+
+#### Step 7: Additional COS Operations
+
+```bash
+# Create a new bucket
+ibmcloud cos bucket-create --bucket my-new-bucket \
   --region us-south
 
-# Upload file
-ibmcloud cos object-put --bucket my-bucket \
+# Upload a file
+ibmcloud cos object-put --bucket my-bucket-1 \
   --key myfile.txt \
   --body ./local-file.txt
 
-# List objects
-ibmcloud cos objects --bucket my-bucket
-
-# Download file
-ibmcloud cos object-get --bucket my-bucket \
+# Download a file
+ibmcloud cos object-get --bucket my-bucket-1 \
   --key myfile.txt \
   --output ./downloaded-file.txt
+
+# Delete an object
+ibmcloud cos object-delete --bucket my-bucket-1 \
+  --key myfile.txt
+
+# Get object metadata
+ibmcloud cos object-head --bucket my-bucket-1 \
+  --key myfile.txt
 ```
+
+#### Common COS Errors and Solutions
+
+**Error: "A valid Service Instance ID / CRN must be configured"**
+- **Solution:** You haven't configured the CRN. Run step 4 above.
+
+**Error: "Bucket not found"**
+- **Solution:** Check bucket name with `ibmcloud cos buckets`
+
+**Error: "Access Denied"**
+- **Solution:** Verify IAM permissions for the COS instance
+
+**Error: "Region not specified"**
+- **Solution:** Add `--region us-south` to your command
 
 ---
 
