@@ -564,28 +564,28 @@ Once you've created your custom deployable architecture, you need to onboard it 
 │          Custom Architecture Deployment Workflow                │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  ┌──────────────────┐                                            │
+│  ┌──────────────────┐                                           │
 │  │  1. Prepare      │  Create Terraform code and metadata       │
 │  │     Code         │  in Git repository                        │
-│  └────────┬─────────┘                                            │
-│           │                                                      │
-│           ▼                                                      │
-│  ┌──────────────────┐                                            │
+│  └────────┬─────────┘                                           │
+│           │                                                     │
+│           ▼                                                     │
+│  ┌──────────────────┐                                           │
 │  │  2. Onboard to   │  Add to private catalog                   │
 │  │     Catalog      │  Configure product details                │
-│  └────────┬─────────┘                                            │
-│           │                                                      │
-│           ▼                                                      │
-│  ┌──────────────────┐                                            │
+│  └────────┬─────────┘                                           │
+│           │                                                     │
+│           ▼                                                     │
+│  ┌──────────────────┐                                           │
 │  │  3. Validate     │  Run validation checks                    │
 │  │     Architecture │  Test deployment                          │
-│  └────────┬─────────┘                                            │
-│           │                                                      │
-│           ▼                                                      │
-│  ┌──────────────────┐                                            │
+│  └────────┬─────────┘                                           │
+│           │                                                     │
+│           ▼                                                     │
+│  ┌──────────────────┐                                           │
 │  │  4. Deploy to    │  Create project                           │
 │  │     Project      │  Configure and deploy                     │
-│  └──────────────────┘                                            │
+│  └──────────────────┘                                           │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
