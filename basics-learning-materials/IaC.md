@@ -1371,13 +1371,6 @@ resource "ibm_is_subnet" "subnets" {
 - [IBM Cloud CLI - Schematics Plugin](https://cloud.ibm.com/docs/schematics?topic=schematics-schematics-cli-reference)
 - [Terraform CLI](https://www.terraform.io/docs/cli/index.html)
 
-### Community and Support
-
-- [IBM Cloud Community](https://community.ibm.com/community/user/cloud/home)
-- [Stack Overflow - IBM Cloud](https://stackoverflow.com/questions/tagged/ibm-cloud)
-- [GitHub - IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm)
-- [IBM Cloud Support](https://cloud.ibm.com/unifiedsupport/supportcenter)
-
 ---
 
 ## Appendix A: Quick Reference Guide
