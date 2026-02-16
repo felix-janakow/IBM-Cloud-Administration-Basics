@@ -553,6 +553,583 @@ my-deployable-architecture/
 }
 ```
 
+### 7.3 Deploying Custom Deployable Architectures
+
+Once you've created your custom deployable architecture, you need to onboard it to the IBM Cloud catalog and deploy it.
+
+**Deployment Process Overview:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│          Custom Architecture Deployment Workflow                │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌──────────────────┐                                            │
+│  │  1. Prepare      │  Create Terraform code and metadata       │
+│  │     Code         │  in Git repository                        │
+│  └────────┬─────────┘                                            │
+│           │                                                      │
+│           ▼                                                      │
+│  ┌──────────────────┐                                            │
+│  │  2. Onboard to   │  Add to private catalog                   │
+│  │     Catalog      │  Configure product details                │
+│  └────────┬─────────┘                                            │
+│           │                                                      │
+│           ▼                                                      │
+│  ┌──────────────────┐                                            │
+│  │  3. Validate     │  Run validation checks                    │
+│  │     Architecture │  Test deployment                          │
+│  └────────┬─────────┘                                            │
+│           │                                                      │
+│           ▼                                                      │
+│  ┌──────────────────┐                                            │
+│  │  4. Deploy to    │  Create project                           │
+│  │     Project      │  Configure and deploy                     │
+│  └──────────────────┘                                            │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+#### Step 1: Prepare Your Repository
+
+**Repository Requirements:**
+- Public or private Git repository (GitHub, GitLab, Bitbucket)
+- Valid Terraform code with IBM Cloud provider
+- `ibm_catalog.json` metadata file
+- Comprehensive README.md
+- Optional: Architecture diagram
+
+**Example Repository Structure:**
+
+```
+my-custom-vpc-architecture/
+├── README.md                    # Architecture documentation
+├── ibm_catalog.json            # Catalog metadata
+├── version.tf                  # Terraform version constraints
+├── variables.tf                # Input variables
+├── main.tf                     # Main infrastructure code
+├── outputs.tf                  # Output values
+├── solutions/                  # Solution variations
+│   ├── standard/
+│   │   ├── main.tf
+│   │   └── variables.tf
+│   └── enterprise/
+│       ├── main.tf
+│       └── variables.tf
+└── modules/                    # Reusable modules
+    ├── vpc/
+    │   ├── main.tf
+    │   ├── variables.tf
+    │   └── outputs.tf
+    └── security/
+        ├── main.tf
+        ├── variables.tf
+        └── outputs.tf
+```
+
+#### Step 2: Onboard to Private Catalog
+
+**Navigation:** IBM Cloud Console → Manage → Catalogs → Private catalogs
+
+**Onboarding Steps:**
+
+1. **Create or Select Private Catalog:**
+   - Click **Create catalog**
+   - Name: `my-organization-catalog`
+   - Description: Internal deployable architectures
+   - Click **Create**
+
+2. **Add Product to Catalog:**
+   - Select your catalog
+   - Click **Private products** → **Add**
+   - Choose **Deployable architecture**
+
+3. **Configure Product Details:**
+
+   | Field | Value | Description |
+   |-------|-------|-------------|
+   | **Product name** | `my-vpc-architecture` | Internal identifier |
+   | **Display name** | `My VPC Architecture` | User-facing name |
+   | **Programmatic name** | `my-org.my-vpc-arch` | Unique identifier |
+   | **Category** | `Network` | Catalog category |
+
+4. **Add Version from Repository:**
+   - Click **Add version**
+   - **Source:** Select repository type (GitHub, GitLab, etc.)
+   - **Repository URL:** `https://github.com/myorg/my-vpc-architecture`
+   - **Branch/Tag:** `main` or specific version tag
+   - **Terraform version:** Select compatible version
+   - Click **Add version**
+
+5. **Configure Version Details:**
+   - **Version:** `1.0.0` (semantic versioning)
+   - **Description:** Initial release with standard VPC setup
+   - **Release notes:** Document features and changes
+
+#### Step 3: Validate Architecture
+
+**Validation Process:**
+
+1. **Configure Validation:**
+   - Navigate to version details
+   - Click **Validate** tab
+   - Select **Schematics workspace** or **Project**
+
+2. **Set Validation Parameters:**
+
+   ```hcl
+   # Example validation variables
+   region           = "us-south"
+   resource_group   = "validation-rg"
+   prefix           = "test"
+   environment      = "validation"
+   ```
+
+3. **Run Validation:**
+   - Click **Validate**
+   - Monitor validation progress
+   - Review validation logs
+   - Fix any errors and re-validate
+
+4. **Validation Checks:**
+   - ✓ Terraform syntax validation
+   - ✓ Provider configuration check
+   - ✓ Resource dependency validation
+   - ✓ Successful plan generation
+   - ✓ Optional: Test deployment
+
+**Expected Validation Output:**
+
+```
+Validation Status: Success
+Duration: 3m 45s
+Resources to create: 12
+Resources to change: 0
+Resources to destroy: 0
+
+Validation Details:
+✓ Terraform configuration valid
+✓ All required variables provided
+✓ No syntax errors detected
+✓ Plan generated successfully
+```
+
+#### Step 4: Deploy Custom Architecture
+
+**Deployment Methods:**
+
+**Method A: Deploy via Projects (Recommended)**
+
+1. **Create or Select Project:**
+   - Navigate to **Projects**
+   - Click **Create project**
+   - Name: `production-infrastructure`
+   - Description: Production VPC deployment
+   - Click **Create**
+
+2. **Add Architecture to Project:**
+   - Click **Add to project**
+   - Select **From catalog**
+   - Choose your custom architecture
+   - Select version
+   - Click **Add**
+
+3. **Configure Deployment:**
+
+   | Variable | Value | Description |
+   |----------|-------|-------------|
+   | `region` | `us-south` | Deployment region |
+   | `resource_group` | `production-rg` | Resource group |
+   | `prefix` | `prod` | Resource name prefix |
+   | `environment` | `production` | Environment tag |
+   | `vpc_cidr` | `10.0.0.0/16` | VPC CIDR block |
+
+4. **Validate Configuration:**
+   - Click **Validate**
+   - Review validation results
+   - Ensure all checks pass
+
+5. **Deploy:**
+   - Click **Deploy**
+   - Confirm deployment
+   - Monitor progress (typically 15-30 minutes)
+   - Review deployment logs
+
+**Method B: Deploy via Schematics Workspace**
+
+1. **Create Workspace:**
+   - Navigate to **Schematics** → **Workspaces**
+   - Click **Create workspace**
+   - **Repository URL:** Your architecture repository
+   - **Terraform version:** Match your architecture version
+   - Click **Create**
+
+2. **Configure Variables:**
+   - Add required variables in **Settings** tab
+   - Mark sensitive variables (API keys, passwords)
+   - Save configuration
+
+3. **Generate and Apply Plan:**
+   - Click **Generate plan**
+   - Review planned changes
+   - Click **Apply plan**
+   - Confirm execution
+
+#### Step 5: Verify Deployment
+
+**Verification Checklist:**
+
+1. **Check Deployment Status:**
+   - Navigate to project or workspace
+   - Verify status shows **Active** or **Applied**
+   - Review activity logs for errors
+
+2. **Verify Resources:**
+   - Navigate to **Resource list**
+   - Filter by resource group or tags
+   - Confirm all expected resources exist
+
+3. **Test Connectivity:**
+   - For VPC: Test subnet connectivity
+   - For compute: SSH to instances
+   - For services: Test API endpoints
+
+4. **Review Outputs:**
+   - Check output values in project/workspace
+   - Verify critical information (IDs, endpoints, etc.)
+
+**Example Output Values:**
+
+```hcl
+Outputs:
+
+vpc_id = "r006-abc123..."
+vpc_name = "prod-vpc"
+subnet_ids = [
+  "0717-def456...",
+  "0727-ghi789..."
+]
+security_group_id = "r006-jkl012..."
+```
+
+### 7.4 Modifying Existing Deployable Architectures
+
+IBM Cloud allows you to customize existing deployable architectures to meet your specific requirements.
+
+**Modification Approaches:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│          Architecture Modification Strategies                   │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  1. Variable Customization (Simplest)                    │   │
+│  │     - Modify input variables only                        │   │
+│  │     - No code changes required                           │   │
+│  │     - Use existing architecture as-is                    │   │
+│  └──────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  2. Fork and Customize (Moderate)                        │   │
+│  │     - Fork repository to your organization               │   │
+│  │     - Modify Terraform code                              │   │
+│  │     - Maintain as custom architecture                    │   │
+│  └──────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  3. Create Variation (Advanced)                          │   │
+│  │     - Extend existing architecture                       │   │
+│  │     - Add new flavors/configurations                     │   │
+│  │     - Publish as new version                             │   │
+│  └──────────────────────────────────────────────────────────┘   │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+#### Approach 1: Variable Customization
+
+**Use Case:** Adjust existing architecture without code changes
+
+**Steps:**
+
+1. **Deploy from Catalog:**
+   - Select architecture from catalog
+   - Click **Add to project**
+
+2. **Customize Variables:**
+   - Modify input variables to match requirements
+   - Example customizations:
+
+   ```hcl
+   # Original defaults
+   number_of_zones = 1
+   instance_count  = 1
+   
+   # Customized for production
+   number_of_zones = 3
+   instance_count  = 3
+   enable_backup   = true
+   enable_monitoring = true
+   ```
+
+3. **Deploy with Custom Values:**
+   - Validate configuration
+   - Deploy architecture
+
+**Advantages:**
+- No code maintenance required
+- Receive updates from original architecture
+- Simple and quick to implement
+
+**Limitations:**
+- Limited to available variables
+- Cannot add new resources
+- Cannot change architecture structure
+
+#### Approach 2: Fork and Customize
+
+**Use Case:** Significant modifications to architecture code
+
+**Steps:**
+
+1. **Fork Repository:**
+   - Navigate to original architecture repository
+   - Click **Fork** (GitHub/GitLab)
+   - Clone to your organization
+
+2. **Modify Terraform Code:**
+
+   **Example: Adding Additional Security Group Rules**
+
+   ```hcl
+   # In your forked repository: modules/security/main.tf
+   
+   # Original security group
+   resource "ibm_is_security_group" "app_sg" {
+     name           = "${var.prefix}-app-sg"
+     vpc            = var.vpc_id
+     resource_group = var.resource_group_id
+   }
+   
+   # Add custom rule for your application
+   resource "ibm_is_security_group_rule" "custom_app_port" {
+     group     = ibm_is_security_group.app_sg.id
+     direction = "inbound"
+     remote    = "0.0.0.0/0"
+     
+     tcp {
+       port_min = 8080
+       port_max = 8080
+     }
+   }
+   ```
+
+3. **Update Metadata:**
+
+   ```json
+   {
+     "products": [{
+       "name": "my-customized-architecture",
+       "label": "My Customized VPC Architecture",
+       "product_kind": "solution",
+       "tags": ["vpc", "security", "custom"],
+       "short_description": "Customized VPC with additional security rules",
+       "flavors": [{
+         "label": "Custom Standard",
+         "name": "custom-standard",
+         "configuration": [{
+           "key": "region",
+           "type": "string",
+           "required": true
+         }, {
+           "key": "custom_app_port",
+           "type": "number",
+           "default_value": 8080,
+           "required": false
+         }]
+       }]
+     }]
+   }
+   ```
+
+4. **Onboard to Private Catalog:**
+   - Follow onboarding steps from Section 7.3
+   - Use your forked repository URL
+   - Validate and deploy
+
+**Advantages:**
+- Complete control over architecture
+- Can add/remove resources
+- Customize for specific requirements
+
+**Limitations:**
+- Must maintain code yourself
+- No automatic updates from original
+- Requires Terraform expertise
+
+#### Approach 3: Create Architecture Variation
+
+**Use Case:** Extend existing architecture with new flavors
+
+**Steps:**
+
+1. **Clone Original Architecture:**
+   ```bash
+   git clone https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone
+   cd terraform-ibm-landing-zone
+   ```
+
+2. **Create New Variation Directory:**
+
+   ```
+   terraform-ibm-landing-zone/
+   ├── solutions/
+   │   ├── standard/           # Existing
+   │   ├── enterprise/         # Existing
+   │   └── custom-variation/   # New variation
+   │       ├── main.tf
+   │       ├── variables.tf
+   │       ├── outputs.tf
+   │       └── version.tf
+   ```
+
+3. **Define Variation Configuration:**
+
+   ```hcl
+   # solutions/custom-variation/main.tf
+   
+   module "landing_zone" {
+     source = "../../"
+     
+     # Use base module with custom settings
+     prefix             = var.prefix
+     region             = var.region
+     resource_group_id  = var.resource_group_id
+     
+     # Custom variation settings
+     number_of_zones    = 3
+     enable_transit_gateway = true
+     enable_vpn         = true
+     
+     # Additional custom resources
+     enable_flow_logs   = true
+     enable_activity_tracker = true
+   }
+   
+   # Add variation-specific resources
+   resource "ibm_is_flow_log" "custom_flow_logs" {
+     name           = "${var.prefix}-flow-logs"
+     target         = module.landing_zone.vpc_id
+     active         = true
+     storage_bucket = ibm_cos_bucket.flow_logs.bucket_name
+   }
+   ```
+
+4. **Update Catalog Metadata:**
+
+   ```json
+   {
+     "products": [{
+       "name": "landing-zone-custom",
+       "label": "Landing Zone - Custom Variation",
+       "flavors": [
+         {
+           "label": "Standard",
+           "name": "standard",
+           "working_directory": "solutions/standard"
+         },
+         {
+           "label": "Enterprise",
+           "name": "enterprise",
+           "working_directory": "solutions/enterprise"
+         },
+         {
+           "label": "Custom High Security",
+           "name": "custom-high-security",
+           "working_directory": "solutions/custom-variation",
+           "configuration": [{
+             "key": "enable_flow_logs",
+             "type": "boolean",
+             "default_value": true
+           }]
+         }
+       ]
+     }]
+   }
+   ```
+
+5. **Validate and Publish:**
+   - Onboard to private catalog
+   - Validate all variations
+   - Deploy and test
+
+**Advantages:**
+- Maintain relationship with base architecture
+- Offer multiple deployment options
+- Can receive base architecture updates
+
+**Limitations:**
+- More complex to maintain
+- Requires understanding of base architecture
+- Must test all variations
+
+#### Best Practices for Modifications
+
+**Version Control:**
+- Use semantic versioning (1.0.0, 1.1.0, 2.0.0)
+- Tag releases in Git
+- Document changes in CHANGELOG.md
+
+**Documentation:**
+- Update README.md with modifications
+- Document new variables and outputs
+- Include architecture diagrams
+- Provide usage examples
+
+**Testing:**
+- Validate in non-production environment first
+- Test all variations/flavors
+- Verify backward compatibility
+- Document test results
+
+**Maintenance:**
+- Monitor for updates to base architecture
+- Review and merge relevant updates
+- Keep dependencies up to date
+- Regular security scans
+
+**Example Modification Workflow:**
+
+```bash
+# 1. Fork and clone repository
+git clone https://github.com/myorg/terraform-ibm-vpc-custom
+cd terraform-ibm-vpc-custom
+
+# 2. Create feature branch
+git checkout -b feature/add-monitoring
+
+# 3. Make modifications
+# Edit Terraform files...
+
+# 4. Test locally
+terraform init
+terraform plan -var-file="test.tfvars"
+
+# 5. Commit and push
+git add .
+git commit -m "Add monitoring resources"
+git push origin feature/add-monitoring
+
+# 6. Create pull request and merge
+
+# 7. Tag new version
+git tag -a v1.1.0 -m "Add monitoring support"
+git push origin v1.1.0
+
+# 8. Update catalog with new version
+```
+
 ---
 
 ## 8. Best Practices and Advanced Topics
