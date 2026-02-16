@@ -1344,14 +1344,14 @@ resource "ibm_is_subnet" "subnets" {
 
 - [Getting Started with IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started)
 - [IBM Cloud Provider for Terraform](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started)
-- [Schematics Workspaces](https://cloud.ibm.com/docs/schematics?topic=schematics-workspace-setup)
+
 
 ### Deployable Architectures
 
 - [Understanding Deployable Architectures](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-understand-module-da)
 - [Creating Deployable Architectures](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-create-da)
 - [Creating Architecture Variations](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-create-variation-da)
-- [Deployable Architecture Catalog](https://cloud.ibm.com/catalog?category=da)
+
 
 ### Terraform Resources
 
