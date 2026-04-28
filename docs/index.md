@@ -6,10 +6,10 @@ layout: home
 /* Import IBM Plex Sans font */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
-/* Ultra-minimal Anthropic-style header bar */
+/* Ultra-minimal light grey header bar */
 .site-header {
-  background: #191919 !important;
-  border-bottom: 1px solid #2d2d2d !important;
+  background: #f5f5f5 !important;
+  border-bottom: none !important;
   min-height: 48px !important;
   max-height: 48px !important;
   position: relative;
@@ -32,7 +32,7 @@ layout: home
   margin-bottom: 0 !important;
   padding-right: 120px !important;
   padding-left: 0 !important;
-  color: #d4d4d4 !important;
+  color: #1a1a1a !important;
   text-decoration: none !important;
   pointer-events: none !important;
   cursor: default !important;
@@ -42,7 +42,7 @@ layout: home
 .site-title:hover,
 .site-title:active,
 .site-title:focus {
-  color: #d4d4d4 !important;
+  color: #1a1a1a !important;
   text-decoration: none !important;
 }
 
@@ -63,15 +63,15 @@ layout: home
   display: none !important;
 }
 
-/* Ultra-minimal Language Toggle Button */
+/* Light grey theme Language Toggle Button */
 .language-toggle {
   position: absolute !important;
   top: 10px !important;
   right: 24px !important;
   z-index: 9999 !important;
-  background: transparent;
-  color: #b4b4b4;
-  border: 1px solid #333333;
+  background: white;
+  color: #2a2a2a;
+  border: 1px solid #d4d4d4;
   padding: 5px 12px;
   border-radius: 4px;
   cursor: pointer;
@@ -86,9 +86,9 @@ layout: home
 }
 
 .language-toggle:hover {
-  background: #252525;
-  border-color: #404040;
-  color: #d4d4d4;
+  background: #fafafa;
+  border-color: #b4b4b4;
+  color: #1a1a1a;
 }
 
 .language-toggle:active {
