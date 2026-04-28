@@ -3,6 +3,39 @@ layout: home
 ---
 
 <style>
+/* Fix site header layout - hide all navigation, show only title */
+.site-header {
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 56px;
+  position: relative;
+}
+
+.site-title {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  line-height: 56px !important;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+  padding-right: 150px; /* Space for language toggle */
+}
+
+/* Hide all navigation elements completely */
+.site-nav {
+  display: none !important;
+}
+
+.site-nav .nav-trigger {
+  display: none !important;
+}
+
+.site-nav label[for="nav-trigger"] {
+  display: none !important;
+}
+
+.site-nav .menu-icon {
+  display: none !important;
+}
+
 /* Modern Language Toggle Button */
 .language-toggle {
   position: absolute !important;
