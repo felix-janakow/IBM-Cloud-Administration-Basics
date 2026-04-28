@@ -3,27 +3,28 @@ layout: home
 ---
 
 <style>
-/* Modern clean header bar like Apple/Anthropic */
+/* Import IBM Plex Sans font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+/* Modern clean header bar with black/grey theme */
 .site-header {
-  background: white !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-  min-height: 60px !important;
-  position: sticky;
-  top: 0;
+  background: #161616 !important;
+  border-bottom: 1px solid #393939 !important;
+  min-height: 64px !important;
+  position: relative;
   z-index: 1000;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
-/* Make title non-clickable and styled as plain text */
+/* Make title non-clickable and styled as plain text with IBM Plex Sans */
 .site-title {
-  font-size: 20px !important;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  font-size: 22px !important;
   font-weight: 600 !important;
-  line-height: 60px !important;
-  letter-spacing: -0.3px !important;
+  line-height: 64px !important;
+  letter-spacing: 0px !important;
   margin-bottom: 0 !important;
   padding-right: 150px !important;
-  color: #1d1d1f !important;
+  color: #f4f4f4 !important;
   text-decoration: none !important;
   pointer-events: none !important;
   cursor: default !important;
@@ -33,7 +34,7 @@ layout: home
 .site-title:hover,
 .site-title:active,
 .site-title:focus {
-  color: #1d1d1f !important;
+  color: #f4f4f4 !important;
   text-decoration: none !important;
 }
 
@@ -54,31 +55,31 @@ layout: home
   display: none !important;
 }
 
-/* Modern Language Toggle Button */
+/* Modern Language Toggle Button - Black/Grey Theme */
 .language-toggle {
   position: absolute !important;
-  top: 10px !important;
+  top: 12px !important;
   right: 20px !important;
   z-index: 9999 !important;
-  background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%);
-  color: white;
-  border: none;
+  background: #393939;
+  color: #f4f4f4;
+  border: 1px solid #525252;
   padding: 10px 20px;
-  border-radius: 7px;
+  border-radius: 6px;
   cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 14px;
-  font-weight: 600;
-  box-shadow: 0 3px 10px rgba(15, 98, 254, 0.3);
-  transition: all 0.3s ease;
+  font-weight: 500;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   gap: 7px;
 }
 
 .language-toggle:hover {
-  background: linear-gradient(135deg, #0353e9 0%, #0043ce 100%);
-  box-shadow: 0 6px 16px rgba(15, 98, 254, 0.4);
-  transform: translateY(-2px);
+  background: #525252;
+  border-color: #6f6f6f;
+  transform: translateY(-1px);
 }
 
 .language-toggle:active {
@@ -102,11 +103,12 @@ body.show-german .lang-en {
   display: none;
 }
 
-/* Enhanced content styling */
+/* Enhanced content styling with IBM Plex Sans */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.7;
   color: #161616;
+  background-color: #ffffff;
 }
 
 .wrapper {
