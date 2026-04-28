@@ -6,11 +6,11 @@ layout: home
 /* Import IBM Plex Sans font */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
-/* Modern clean header bar with black/grey theme */
+/* Anthropic-style clean header bar */
 .site-header {
-  background: #161616 !important;
-  border-bottom: 1px solid #393939 !important;
-  min-height: 64px !important;
+  background: #1a1a1a !important;
+  border-bottom: 1px solid #2a2a2a !important;
+  min-height: 60px !important;
   position: relative;
   z-index: 1000;
 }
@@ -18,13 +18,13 @@ layout: home
 /* Make title non-clickable and styled as plain text with IBM Plex Sans */
 .site-title {
   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-  font-size: 22px !important;
-  font-weight: 600 !important;
-  line-height: 64px !important;
-  letter-spacing: 0px !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 60px !important;
+  letter-spacing: -0.2px !important;
   margin-bottom: 0 !important;
   padding-right: 150px !important;
-  color: #f4f4f4 !important;
+  color: #e8e8e8 !important;
   text-decoration: none !important;
   pointer-events: none !important;
   cursor: default !important;
@@ -34,7 +34,7 @@ layout: home
 .site-title:hover,
 .site-title:active,
 .site-title:focus {
-  color: #f4f4f4 !important;
+  color: #e8e8e8 !important;
   text-decoration: none !important;
 }
 
@@ -55,31 +55,30 @@ layout: home
   display: none !important;
 }
 
-/* Modern Language Toggle Button - Black/Grey Theme */
+/* Anthropic-style Language Toggle Button */
 .language-toggle {
   position: absolute !important;
-  top: 12px !important;
+  top: 14px !important;
   right: 20px !important;
   z-index: 9999 !important;
-  background: #393939;
-  color: #f4f4f4;
-  border: 1px solid #525252;
-  padding: 10px 20px;
+  background: transparent;
+  color: #e8e8e8;
+  border: 1px solid #3a3a3a;
+  padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 400;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
 }
 
 .language-toggle:hover {
-  background: #525252;
-  border-color: #6f6f6f;
-  transform: translateY(-1px);
+  background: #2a2a2a;
+  border-color: #4a4a4a;
 }
 
 .language-toggle:active {
@@ -103,51 +102,57 @@ body.show-german .lang-en {
   display: none;
 }
 
-/* Enhanced content styling with IBM Plex Sans */
+/* Anthropic-style content with IBM Plex Sans */
 body {
   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.7;
-  color: #161616;
-  background-color: #ffffff;
+  line-height: 1.65;
+  color: #1a1a1a;
+  background-color: #fafafa;
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 60px 40px;
+  background: white;
 }
 
 h1 {
-  color: #0f62fe;
-  border-bottom: 3px solid #0f62fe;
-  padding-bottom: 12px;
-  margin-top: 50px;
-  margin-bottom: 25px;
-  font-size: 2.2em;
-  font-weight: 700;
+  color: #1a1a1a;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 16px;
+  margin-top: 60px;
+  margin-bottom: 32px;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 h2 {
-  color: #0353e9;
-  margin-top: 35px;
-  margin-bottom: 18px;
-  font-size: 1.6em;
+  color: #2a2a2a;
+  margin-top: 48px;
+  margin-bottom: 20px;
+  font-size: 1.75em;
   font-weight: 600;
-  padding-left: 10px;
-  border-left: 4px solid #0353e9;
+  letter-spacing: -0.3px;
+  padding-left: 0;
+  border-left: none;
 }
 
 h3 {
-  color: #525252;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  font-size: 1.3em;
+  color: #3a3a3a;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 1.35em;
   font-weight: 600;
+  letter-spacing: -0.2px;
 }
 
 p {
-  margin-bottom: 16px;
-  line-height: 1.8;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  color: #3a3a3a;
+  font-size: 16px;
 }
 
 /* Center all images */
@@ -158,8 +163,8 @@ img {
   display: block !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  margin-top: 20px !important;
-  margin-bottom: 20px !important;
+  margin-top: 32px !important;
+  margin-bottom: 32px !important;
   text-align: center !important;
 }
 
@@ -170,75 +175,84 @@ p img {
 }
 
 ul, ol {
-  margin-bottom: 20px;
-  padding-left: 30px;
+  margin-bottom: 24px;
+  padding-left: 28px;
+  color: #3a3a3a;
 }
 
 li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   line-height: 1.7;
 }
 
 img {
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  margin: 25px 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin: 32px 0;
   max-width: 100%;
   height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.2s ease;
+  border: 1px solid #e8e8e8;
 }
 
 img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 code {
-  background: #f4f4f4;
+  background: #f5f5f5;
   padding: 3px 8px;
   border-radius: 4px;
-  font-family: 'Courier New', monospace;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
   font-size: 0.9em;
-  color: #0f62fe;
-  border: 1px solid #e0e0e0;
+  color: #2a2a2a;
+  border: 1px solid #e8e8e8;
 }
 
 strong {
-  color: #161616;
+  color: #1a1a1a;
   font-weight: 600;
 }
 
 hr {
   border: none;
-  border-top: 2px solid #e0e0e0;
-  margin: 40px 0;
+  border-top: 1px solid #e8e8e8;
+  margin: 48px 0;
 }
 
-/* Table styling */
+/* Anthropic-style table styling */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 25px 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
+  margin: 32px 0;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
   overflow: hidden;
 }
 
 th {
-  background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%);
-  color: white;
-  padding: 15px;
+  background: #fafafa;
+  color: #1a1a1a;
+  padding: 14px 16px;
   text-align: left;
   font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #3a3a3a;
+  font-size: 15px;
+}
+
+tr:last-child td {
+  border-bottom: none;
 }
 
 tr:hover {
-  background-color: #f4f4f4;
+  background-color: #fafafa;
 }
 
 /* Smooth transitions for language switching */
