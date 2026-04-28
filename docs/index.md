@@ -6,20 +6,22 @@ layout: home
 /* Import IBM Plex Sans font */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
-/* Ultra-minimal light grey header bar */
+/* Ultra-minimal light grey header bar - full width */
 .site-header {
-  background: #f5f5f5 !important;
+  background: #f0f0f0 !important;
   border-bottom: none !important;
   min-height: 48px !important;
   max-height: 48px !important;
   position: relative;
   z-index: 1000;
-  padding: 0 !important;
+  padding: 0 24px !important;
+  width: 100% !important;
 }
 
 .site-header .wrapper {
-  padding: 0 24px !important;
+  padding: 0 !important;
   max-width: 100% !important;
+  margin: 0 !important;
 }
 
 /* Make title non-clickable and styled as plain text with IBM Plex Sans */
