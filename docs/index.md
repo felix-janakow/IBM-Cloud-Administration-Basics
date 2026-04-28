@@ -3,33 +3,37 @@ layout: home
 ---
 
 <style>
-/* Create a professional colored header bar */
+/* Modern clean header bar like Apple/Anthropic */
 .site-header {
-  background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%) !important;
-  border-bottom: none !important;
-  min-height: 70px !important;
-  position: relative;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: white !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  min-height: 60px !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
+/* Make title non-clickable and styled as plain text */
 .site-title {
-  font-size: 24px !important;
-  font-weight: 700 !important;
-  line-height: 70px !important;
-  letter-spacing: 0.5px !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 60px !important;
+  letter-spacing: -0.3px !important;
   margin-bottom: 0 !important;
   padding-right: 150px !important;
-  color: white !important;
+  color: #1d1d1f !important;
   text-decoration: none !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  pointer-events: none !important;
+  cursor: default !important;
 }
 
-.site-title:visited {
-  color: white !important;
-}
-
-.site-title:hover {
-  color: white !important;
+.site-title:visited,
+.site-title:hover,
+.site-title:active,
+.site-title:focus {
+  color: #1d1d1f !important;
   text-decoration: none !important;
 }
 
