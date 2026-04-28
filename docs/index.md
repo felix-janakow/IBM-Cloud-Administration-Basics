@@ -6,25 +6,33 @@ layout: home
 /* Import IBM Plex Sans font */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
-/* Anthropic-style clean header bar */
+/* Ultra-minimal Anthropic-style header bar */
 .site-header {
-  background: #1a1a1a !important;
-  border-bottom: 1px solid #2a2a2a !important;
-  min-height: 60px !important;
+  background: #191919 !important;
+  border-bottom: 1px solid #2d2d2d !important;
+  min-height: 48px !important;
+  max-height: 48px !important;
   position: relative;
   z-index: 1000;
+  padding: 0 !important;
+}
+
+.site-header .wrapper {
+  padding: 0 24px !important;
+  max-width: 100% !important;
 }
 
 /* Make title non-clickable and styled as plain text with IBM Plex Sans */
 .site-title {
   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-  font-size: 18px !important;
+  font-size: 15px !important;
   font-weight: 500 !important;
-  line-height: 60px !important;
-  letter-spacing: -0.2px !important;
+  line-height: 48px !important;
+  letter-spacing: 0px !important;
   margin-bottom: 0 !important;
-  padding-right: 150px !important;
-  color: #e8e8e8 !important;
+  padding-right: 120px !important;
+  padding-left: 0 !important;
+  color: #d4d4d4 !important;
   text-decoration: none !important;
   pointer-events: none !important;
   cursor: default !important;
@@ -34,7 +42,7 @@ layout: home
 .site-title:hover,
 .site-title:active,
 .site-title:focus {
-  color: #e8e8e8 !important;
+  color: #d4d4d4 !important;
   text-decoration: none !important;
 }
 
@@ -55,30 +63,32 @@ layout: home
   display: none !important;
 }
 
-/* Anthropic-style Language Toggle Button */
+/* Ultra-minimal Language Toggle Button */
 .language-toggle {
   position: absolute !important;
-  top: 14px !important;
-  right: 20px !important;
+  top: 10px !important;
+  right: 24px !important;
   z-index: 9999 !important;
   background: transparent;
-  color: #e8e8e8;
-  border: 1px solid #3a3a3a;
-  padding: 8px 16px;
-  border-radius: 6px;
+  color: #b4b4b4;
+  border: 1px solid #333333;
+  padding: 5px 12px;
+  border-radius: 4px;
   cursor: pointer;
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
+  line-height: 1;
 }
 
 .language-toggle:hover {
-  background: #2a2a2a;
-  border-color: #4a4a4a;
+  background: #252525;
+  border-color: #404040;
+  color: #d4d4d4;
 }
 
 .language-toggle:active {
