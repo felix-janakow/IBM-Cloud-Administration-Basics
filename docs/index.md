@@ -3,20 +3,34 @@ layout: home
 ---
 
 <style>
-/* Fix site header layout - hide all navigation, show only title */
+/* Create a professional colored header bar */
 .site-header {
-  border-bottom: 1px solid #e8e8e8;
-  min-height: 56px;
+  background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%) !important;
+  border-bottom: none !important;
+  min-height: 70px !important;
   position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .site-title {
-  font-size: 22px !important;
-  font-weight: 600 !important;
-  line-height: 56px !important;
-  letter-spacing: -0.5px;
-  margin-bottom: 0;
-  padding-right: 150px; /* Space for language toggle */
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 70px !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 0 !important;
+  padding-right: 150px !important;
+  color: white !important;
+  text-decoration: none !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.site-title:visited {
+  color: white !important;
+}
+
+.site-title:hover {
+  color: white !important;
+  text-decoration: none !important;
 }
 
 /* Hide all navigation elements completely */
